@@ -8,7 +8,6 @@ import { MAIN_NAV } from "@/constants/site";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { Logo } from "@/components/shared/Logo";
-import { ThemeToggle } from "@/components/shared/ThemeToggle";
 import { Drawer } from "@/components/ui/Drawer";
 
 export function Navbar() {
@@ -24,7 +23,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className="dark glass-nav fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out-expo">
+    <header className="glass-nav fixed inset-x-0 top-0 z-50 transition-all duration-300 ease-out-expo">
       <nav
         aria-label="Primary"
         className={cn(
@@ -91,7 +90,6 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <ThemeToggle />
           <Button href="/contact" variant="ghost" size="sm">
             Contact
           </Button>
@@ -101,7 +99,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-1 lg:hidden">
-          <ThemeToggle />
           <button
             type="button"
             className="flex h-10 w-10 items-center justify-center rounded text-secondary-0"
@@ -115,24 +112,24 @@ export function Navbar() {
         </div>
       </nav>
 
-      <Drawer isOpen={mobileOpen} onClose={() => setMobileOpen(false)} title="Menu" className="dark">
+      <Drawer isOpen={mobileOpen} onClose={() => setMobileOpen(false)} title="Menu">
         <ul className="flex flex-col gap-1">
           {MAIN_NAV.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}
-                className="block rounded px-2 py-3 text-base font-medium text-secondary-100"
+                className="block rounded-md px-3 py-3.5 text-base font-medium text-secondary-100 transition-colors hover:bg-secondary-200/6 hover:text-secondary-0"
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
               </Link>
               {"children" in item && (
-                <ul className="ml-2 flex flex-col gap-0.5 border-l border-border-subtle pl-4">
+                <ul className="ml-3 flex flex-col gap-0.5 border-l border-border-subtle pl-4">
                   {item.children.map((child) => (
                     <li key={child.href}>
                       <Link
                         href={child.href}
-                        className="block rounded px-2 py-2 text-sm text-secondary-400 hover:text-secondary-0"
+                        className="block rounded-md px-3 py-2.5 text-sm text-secondary-400 transition-colors hover:bg-secondary-200/6 hover:text-secondary-0"
                         onClick={() => setMobileOpen(false)}
                       >
                         {child.label}
@@ -143,7 +140,7 @@ export function Navbar() {
               )}
             </li>
           ))}
-          <li className="mt-4 flex flex-col gap-3">
+          <li className="mt-5 flex flex-col gap-3">
             <Button href="/contact" variant="outline" fullWidth onClick={() => setMobileOpen(false)}>
               Contact
             </Button>

@@ -21,7 +21,7 @@ export default function IndustriesPage() {
           description="Every industry has its own workflows and expectations. Pick yours to see what we typically build and where to start."
         />
 
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <IndustryGrid industries={INDUSTRIES} />
         </div>
       </div>

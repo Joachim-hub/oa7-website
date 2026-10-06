@@ -26,7 +26,7 @@ export function LegalLayout({ title, lastUpdated, children }: LegalLayoutProps) 
         </h1>
         <p className="mt-3 text-sm text-secondary-500">Last updated {lastUpdated}</p>
 
-        <div className="mt-12 space-y-10">{children}</div>
+        <div className="mt-8 md:mt-12 space-y-10">{children}</div>
       </div>
     </div>
   );

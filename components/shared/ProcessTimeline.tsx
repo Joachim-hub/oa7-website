@@ -24,7 +24,7 @@ export function ProcessTimeline({
 }: ProcessTimelineProps) {
   return (
     <section
-      className={variant === "raised" ? "bg-surface-raised py-24 md:py-30" : "py-24 md:py-30"}
+      className={variant === "raised" ? "bg-surface-raised py-16 md:py-24 lg:py-30" : "py-16 md:py-24 lg:py-30"}
       aria-labelledby="process-heading"
     >
       <div className="container-oa7">

@@ -20,7 +20,7 @@ export default function TemplatesPage() {
           description="Every template here is real, working code, not a mockup. Preview it live, then customize it to your brand or request a quote for a fully custom build."
         />
 
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <TemplatesExplorer templates={TEMPLATES} />
         </div>
       </div>

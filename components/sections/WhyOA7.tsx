@@ -15,16 +15,16 @@ const ICONS: Record<Reason["icon"], typeof Users> = {
 
 export function WhyOA7() {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="why-oa7-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="why-oa7-heading">
       <div className="container-oa7 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
         <div>
           <SectionHeader
-            eyebrow="Why OA7"
-            title="Software that earns your trust before you launch."
+            eyebrow="Why choose us"
+            title="Why OA7 Software?"
             description="We treat every engagement the way we'd want ours treated: honestly scoped, clearly communicated, and built to last."
           />
 
-          <dl className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+          <dl className="mt-8 md:mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
             {WHY_OA7.map((reason, i) => {
               const Icon = ICONS[reason.icon];
               return (

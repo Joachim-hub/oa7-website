@@ -5,158 +5,210 @@ import { LegalSection } from "@/components/legal/LegalSection";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
-  description: `How ${SITE.name} collects, uses, and protects information.`,
+  description: `How ${SITE.name} collects, uses, and protects information across our website and Hitz Play.`,
 };
 
 export default function PrivacyPolicyPage() {
   return (
     <LegalLayout title="Privacy Policy" lastUpdated="October 5, 2026">
       <p className="text-base leading-relaxed text-secondary-300">
-        This policy covers what {SITE.legalName} (&ldquo;OA7,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;)
-        collects through this website and our Hitz Play application, and what we do with it.
-        It&rsquo;s written to describe our actual practices, not to cover every possibility in the abstract.
+        This policy explains how {SITE.legalName} (“OA7,” “we,” “us”) handles
+        information collected through this website and through Hitz Play, our
+        music player application. It is written to describe our actual
+        practices and the services we provide.
       </p>
 
       <LegalSection title="OA7 Website">
-        <p>
-          When you use the contact form, we collect your name, email address, the project type you
-          select, and whatever you write in the message field. That&rsquo;s the only information this
-          site actively asks for.
-        </p>
-
-        <p>
-          Our hosting provider automatically logs basic technical information common to any website,
-          such as IP address and browser type, for security and reliability purposes. We don&rsquo;t
-          access these logs for marketing.
-        </p>
-
-        <p>
-          The site also stores a single, non-identifying preference in your browser: whether
-          you&rsquo;ve chosen light or dark mode. See the{" "}
-          <a href="/legal/cookies">Cookie Policy</a> for detail on that.
-        </p>
-
-        <LegalSection title="How we use website information">
+        <LegalSection title="What we collect">
           <p>
-            Contact form submissions are used to respond to your inquiry and, if you become a client,
-            to deliver the project we agree on. We don&rsquo;t sell, rent, or share your information
-            with third parties for marketing, and we don&rsquo;t currently run any advertising or
-            analytics tracking on this site.
+            When you use the contact form, we collect your name, email address,
+            the project type you select, and whatever you write in the message
+            field. That’s the only information this site actively asks for.
+          </p>
+
+          <p>
+            Our hosting provider automatically logs basic technical information
+            common to any website, such as IP address and browser type, for
+            security and reliability purposes. We don’t access these logs for
+            marketing.
+          </p>
+
+          <p>
+            The site also stores a single, non-identifying preference in your
+            browser: whether you’ve chosen light or dark mode. See the{" "}
+            <a href="/legal/cookies">Cookie Policy</a> for detail on that.
+          </p>
+        </LegalSection>
+
+        <LegalSection title="How we use it">
+          <p>
+            Contact form submissions are used to respond to your inquiry and,
+            if you become a client, to deliver the project we agree on. We
+            don’t sell, rent, or share your information with third parties for
+            marketing, and we don’t currently run any advertising or analytics
+            tracking on this site.
+          </p>
+        </LegalSection>
+
+        <LegalSection title="Data retention">
+          <p>
+            We keep contact form submissions and project-related correspondence
+            for as long as it’s relevant to the inquiry or project, and
+            generally no longer than a few years afterward for our own records.
+            You can ask us to delete your information at any point, see below.
+          </p>
+        </LegalSection>
+
+        <LegalSection title="Your rights">
+          <p>
+            You can ask us what information we hold about you, ask us to
+            correct it, or ask us to delete it, by emailing{" "}
+            <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. We’ll respond
+            within a reasonable time.
+          </p>
+        </LegalSection>
+
+        <LegalSection title="Security">
+          <p>
+            We take reasonable steps to protect the information you share with
+            us. No method of transmission or storage is completely secure, and
+            we can’t guarantee absolute security, but we don’t treat that as an
+            excuse to be careless with it.
           </p>
         </LegalSection>
       </LegalSection>
 
       <LegalSection title="Hitz Play">
         <p>
-          Hitz Play is a music player application developed by OA7 Software. This section explains
-          how information may be handled when you use Hitz Play.
+          Hitz Play is a music player application developed and operated by{" "}
+          {SITE.legalName}. This section explains how information may be
+          handled when you use Hitz Play.
         </p>
 
         <LegalSection title="Information we collect">
           <p>
-            Depending on the features you use, Hitz Play may process information associated with your
-            account and your use of the application, such as account information, authentication
-            information, music-related activity, and application preferences.
+            Hitz Play may collect information that you provide when creating
+            or using an account, such as your email address and account
+            information.
           </p>
 
           <p>
-            Hitz Play may also process technical information necessary for the application to
-            function properly, maintain security, and provide its features.
+            The app may also process information associated with your use of
+            its music features, such as playlists, favorites, listening
+            activity, and other music-related preferences or information that
+            you choose to use within the app.
+          </p>
+
+          <p>
+            Hitz Play may also process information necessary to provide
+            features such as account authentication, music playback, and
+            synchronized app functionality.
           </p>
         </LegalSection>
 
         <LegalSection title="Listening activity and presence">
           <p>
-            Hitz Play includes features that may show whether users are currently listening to music.
-            When this feature is enabled and available, Hitz Play may process listening activity so
-            that the application can display the number of people currently listening to the same song.
+            Hitz Play includes a feature that can show how many people are
+            currently listening to the same song. When this feature is
+            enabled, information about your current listening activity may be
+            used to calculate and display an anonymous or non-identifying
+            listener count.
           </p>
 
           <p>
-            This feature is intended to provide a real-time listening experience. We do not intend
-            this feature to display private personal information about individual listeners.
+            This feature is intended to show the number of current listeners,
+            rather than publicly identify individual listeners.
+          </p>
+
+          <p>
+            You can control this feature through the relevant setting within
+            Hitz Play.
           </p>
         </LegalSection>
 
-        <LegalSection title="How we use Hitz Play information">
+        <LegalSection title="How we use information">
           <p>
-            Information processed through Hitz Play may be used to provide and improve the application,
-            authenticate users, maintain accounts, provide requested features, maintain security,
-            troubleshoot problems, and understand how the application is being used.
+            Information collected through Hitz Play may be used to provide,
+            maintain, secure, and improve the app and its features, including
+            account management, authentication, music playback, playlists,
+            favorites, listening-related features, and user preferences.
           </p>
 
           <p>
-            We do not sell personal information to third parties.
+            We do not sell your personal information to third parties for
+            advertising purposes.
           </p>
         </LegalSection>
 
         <LegalSection title="Third-party services">
           <p>
-            Hitz Play may rely on third-party services to provide certain application functionality,
-            such as authentication, data storage, hosting, or other technical services. Information
-            necessary for those services may be processed by the relevant service providers according
-            to their own privacy policies and terms.
+            Hitz Play may use third-party service providers to support certain
+            app functionality, including authentication, data storage, and
+            other technical services required to operate the application.
+          </p>
+
+          <p>
+            These providers may process information on our behalf as necessary
+            to provide their services. Their handling of information may also
+            be subject to their own privacy policies and terms.
           </p>
         </LegalSection>
 
         <LegalSection title="Data retention">
           <p>
-            We retain information only for as long as reasonably necessary to provide the relevant
-            services, maintain accounts and application functionality, meet legitimate operational
-            requirements, resolve disputes, and comply with applicable obligations.
+            We retain information associated with Hitz Play accounts and app
+            usage for as long as reasonably necessary to provide the service,
+            maintain security, comply with applicable obligations, resolve
+            disputes, and enforce our agreements.
+          </p>
+
+          <p>
+            Where information is no longer required for these purposes, we may
+            delete or otherwise remove it in accordance with our practices and
+            applicable requirements.
           </p>
         </LegalSection>
 
         <LegalSection title="Account deletion and privacy requests">
           <p>
-            If you have a Hitz Play account and want to request deletion of your account or personal
-            information, contact us at{" "}
+            If you have questions about information associated with your Hitz
+            Play account, or if you want to request deletion of your personal
+            information, you can contact us at{" "}
             <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
           </p>
 
           <p>
-            We may need to verify the request before processing it. Some information may need to be
-            retained where required for legitimate legal, security, or operational purposes.
+            We may need to verify your request before taking action to protect
+            your account and information.
           </p>
         </LegalSection>
 
         <LegalSection title="Security">
           <p>
-            We take reasonable steps to protect information handled through Hitz Play and the OA7
-            website. No method of transmission or storage is completely secure, and we can&rsquo;t
-            guarantee absolute security, but we don&rsquo;t treat that as an excuse to be careless
-            with information.
+            We take reasonable steps to protect information associated with
+            Hitz Play against unauthorized access, alteration, disclosure, or
+            destruction. However, no method of electronic transmission or
+            storage is completely secure, and we cannot guarantee absolute
+            security.
           </p>
         </LegalSection>
       </LegalSection>
 
-      <LegalSection title="Data retention">
-        <p>
-          We keep contact form submissions and project-related correspondence for as long as it&rsquo;s
-          relevant to the inquiry or project, and generally no longer than a few years afterward for
-          our own records. You can ask us to delete your information at any point, see below.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="Your rights">
-        <p>
-          You can ask us what information we hold about you, ask us to correct it, or ask us to
-          delete it, by emailing <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. We&rsquo;ll
-          respond within a reasonable time.
-        </p>
-      </LegalSection>
-
       <LegalSection title="Changes to this policy">
         <p>
-          If how we handle information changes meaningfully, we&rsquo;ll update this page and the
-          date at the top. We don&rsquo;t expect that to happen often.
+          If how we handle information changes meaningfully, we’ll update this
+          page and the date at the top. We may also update this policy when
+          new services, features, or legal requirements make an update
+          necessary.
         </p>
       </LegalSection>
 
       <LegalSection title="Contact">
         <p>
-          Questions about this policy, the OA7 website, or Hitz Play can go to{" "}
-          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+          Questions about this privacy policy, the OA7 website, or Hitz Play
+          can be sent to{" "}
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>. We’ll respond
+          within a reasonable time.
         </p>
       </LegalSection>
     </LegalLayout>

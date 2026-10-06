@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function ContactHero() {
   return (
-    <section className="pb-12 pt-32 md:pb-16 md:pt-40">
+    <section className="pb-8 pt-24 md:pb-12 md:pt-32 lg:pb-16 lg:pt-40">
       <div className="container-oa7">
         <motion.div
           initial={{ opacity: 0, y: 12 }}

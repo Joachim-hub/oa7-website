@@ -12,9 +12,9 @@ const NAV_GROUPS: { title: string; links: typeof FOOTER_NAV.services }[] = [
 
 export function Footer() {
   return (
-    <footer className="dark border-t border-border-subtle bg-surface-sunken">
-      <div className="container-oa7 py-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_repeat(4,1fr)]">
+    <footer className="border-t border-border-subtle bg-surface-sunken">
+      <div className="container-oa7 py-12 md:py-16">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.4fr_repeat(4,1fr)] lg:gap-12">
           <div>
             <Logo className="h-9 w-auto" />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-secondary-500">
@@ -25,28 +25,33 @@ export function Footer() {
             </div>
           </div>
 
-          {NAV_GROUPS.map((group) => (
-            <nav key={group.title} aria-label={group.title}>
-              <h3 className="text-label font-semibold uppercase text-secondary-500">
-                {group.title}
-              </h3>
-              <ul className="mt-4 space-y-3">
-                {group.links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-secondary-300 transition-colors hover:text-accent-ink"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          ))}
+          {/* Two columns on mobile/tablet to cut the footer's scroll height;
+              `lg:contents` unwraps this on desktop so each group becomes its
+              own column in the 5-column grid above, unchanged from before. */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:contents">
+            {NAV_GROUPS.map((group) => (
+              <nav key={group.title} aria-label={group.title}>
+                <h3 className="text-label font-semibold uppercase text-secondary-500">
+                  {group.title}
+                </h3>
+                <ul className="mt-4 space-y-2.5">
+                  {group.links.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        href={link.href}
+                        className="text-sm text-secondary-300 transition-colors hover:text-accent-ink"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-6 border-t border-border-subtle pt-8 sm:flex-row sm:items-center">
+        <div className="mt-10 flex flex-col items-start justify-between gap-6 border-t border-border-subtle pt-6 sm:flex-row sm:items-center md:mt-16 md:pt-8">
           <p className="text-sm text-secondary-500">
             &copy; {new Date().getFullYear()} {SITE.legalName}. All rights reserved.
           </p>

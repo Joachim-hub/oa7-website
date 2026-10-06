@@ -2,16 +2,19 @@
 
 Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion.
 
-## Status: v1.1 performance/code cleanup complete (Batch 12, step 4 of 5)
+## Status: v1.1 released — mobile polish, rebrand, theme removal (see CHANGELOG_v1.1.md)
 
 `npm install && npm run build` succeeds (verified in the build sandbox; the
 only failure there was Google Fonts being unreachable behind that sandbox's
 network allowlist, which won't happen on your machine or any real host).
 All 46 routes build and statically generate successfully.
 
-Steps 1–4 (copy/buzzwords, design/spacing/rhythm, accessibility,
-performance/code cleanup) are done. Step 5 (scored self-review) is next —
-see `/areas/oa7-website.md` in this project's memory for the full sequence.
+v1.1 is a production-polish release on top of the feature-complete v1.0:
+rebrand to OA7 Software, light theme removed entirely (single permanent
+dark theme), and a systematic mobile-spacing pass across heroes, cards,
+sections, footer, and navigation. Full details in `CHANGELOG_v1.1.md`.
+The batch-12 review sequence documented below (copy, design/spacing,
+accessibility, performance) predates and fed into this release.
 
 This batch adds the custom 404 page, all three legal pages (Privacy,
 Terms, Cookies), and the `Drawer` component — wired into the mobile nav
@@ -370,16 +373,16 @@ shorthand rather than prose.
 - **Logo**: the real OA7 logo (the file you sent) is wired in everywhere via
   `components/shared/Logo.tsx`. See the "Refinement pass" section above
   for why Navbar/Footer stay dark-themed regardless of site theme.
-- **Placeholder contact info is now user-facing — please replace it.**
-  `constants/site.ts` has `email: "hello@oa7.dev"` and a
-  `whatsapp: "+233000000000"` that I invented as placeholders back in the
-  very first batch, before there was a real Contact page for them to
-  matter. Now that `/contact` displays the email as a real, clickable
-  channel, sending an inquiry there wouldn't reach you. I deliberately
-  left WhatsApp off the visible Contact page (obviously fake all-zero
-  digits, so publishing it felt worse than omitting it), but the email
-  is live on the page. Update both values in `constants/site.ts` with
-  your real ones before this goes anywhere near production — it's the
+- **Placeholder contact info is user-facing — still needs a real value.**
+  `constants/site.ts` originally had `email: "hello@oa7.dev"`, updated in
+  v1.1 to `contact@oa7software.com` per your request — still a
+  placeholder, just a different one, until the real domain is purchased.
+  `whatsapp: "+233000000000"` is still the obviously-fake placeholder
+  from the first batch and hasn't been touched. I deliberately
+  left WhatsApp off the visible Contact page (fake all-zero digits felt
+  worse published than omitted), but the email is live on the page.
+  Update both in `constants/site.ts` with real values before production —
+  it's the
   one place both are defined, so the fix is a two-line edit.
 - **Dark-first**: the brand's primary colour is a deep navy, so the site is
   built dark-mode-first (matches the Linear/Vercel/Arc reference points in

@@ -21,7 +21,7 @@ export function BenefitsSection({
   columns = 2,
 }: BenefitsSectionProps) {
   return (
-    <section className="bg-surface-raised py-24 md:py-30" aria-labelledby="benefits-heading">
+    <section className="bg-surface-raised py-16 md:py-24 lg:py-30" aria-labelledby="benefits-heading">
       <div className="container-oa7">
         <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 

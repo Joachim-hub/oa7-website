@@ -20,7 +20,7 @@ export default function PortfolioPage() {
           description="Each case study covers the actual problem, the approach we took, and what shipped. Not just a screenshot gallery."
         />
 
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <PortfolioExplorer projects={PROJECTS} />
         </div>
       </div>

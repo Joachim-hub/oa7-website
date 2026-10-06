@@ -17,7 +17,7 @@ const item = {
 
 export function ProcessHero() {
   return (
-    <section className="relative overflow-hidden pb-20 pt-32 md:pb-24 md:pt-40">
+    <section className="relative overflow-hidden pb-14 pt-24 md:pb-16 md:pt-28 lg:pb-24 lg:pt-40">
       {/* Large outlined stage counter — a motif specific to this page's
           subject (a ten-stage process), not a reused decorative pattern. */}
       <span

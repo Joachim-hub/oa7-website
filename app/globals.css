@@ -2,71 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
- * Theme variables.
- * Dark is the default (":root" and ".dark" hold identical values) since
- * that's how this site was designed first. ".light" overrides the same
- * variable names with values derived from the same brand palette, not a
- * separate arbitrary palette.
- *
- * Navbar and Footer intentionally re-apply ".dark" on their own root
- * element regardless of the page theme — the OA7 logo file is light-
- * colored on transparent, so it only reads correctly on a dark surface.
- * That's a deliberate scoping decision, not an oversight.
- */
-:root,
-.dark {
+:root {
   --font-inter: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color-scheme: dark;
-
-  --secondary-0: 255 255 255;
-  --secondary-50: 248 250 252;
-  --secondary-100: 241 245 249;
-  --secondary-200: 226 232 240;
-  --secondary-300: 203 213 225;
-  --secondary-400: 148 163 184;
-  --secondary-500: 130 145 168;
-  --secondary-600: 107 122 146;
-
-  --surface-base: 10 25 47;
-  --surface-raised: 15 33 56;
-  --surface-overlay: 20 42 66;
-  --surface-sunken: 7 19 34;
-
-  --border-rgb: 226 232 240;
-  --accent-ink: 0 240 255;
-  --success-ink: 22 199 132;
-  --warning-ink: 245 166 35;
-  --error-ink: 245 72 75;
-}
-
-.light {
-  color-scheme: light;
-
-  /* Text scale — darkest (headings) to lightest (faint/decorative),
-     built from the existing primary/neutral ramps rather than new colors. */
-  --secondary-0: 10 25 47;      /* primary-900: headings */
-  --secondary-50: 54 62 74;     /* neutral-700 */
-  --secondary-100: 54 62 74;    /* neutral-700: high-emphasis body */
-  --secondary-200: 54 62 74;    /* neutral-700 */
-  --secondary-300: 78 88 103;   /* neutral-600 */
-  --secondary-400: 78 88 103;   /* neutral-600: body copy, AA-safe (~7:1 on white) */
-  --secondary-500: 78 88 103;   /* neutral-600: kept AA-safe rather than the lighter
-                                    neutral-500, which measured borderline (~4.3:1) */
-  --secondary-600: 112 123 138; /* neutral-500: faint/decorative only, not body text */
-
-  --surface-base: 247 249 251;   /* neutral-50: page background */
-  --surface-raised: 255 255 255; /* white: cards sit a shade lighter than the page */
-  --surface-overlay: 238 241 245; /* neutral-100 */
-  --surface-sunken: 221 227 234;  /* neutral-200 */
-
-  --border-rgb: 10 25 47; /* navy-tinted borders instead of light-tinted */
-  --accent-ink: 0 116 124; /* accent-700: the brand cyan darkened until it holds
-                               AA contrast as text on a light surface */
-  --success-ink: 14 125 83;   /* success.dark: 5.15:1 on white */
-  --warning-ink: 150 89 10;   /* darker than warning.dark — that measured 4.48:1,
-                                  too close to the AA line; this measures 5.63:1 */
-  --error-ink: 168 36 38;     /* error.dark: 7.13:1 on white */
 }
 
 * {

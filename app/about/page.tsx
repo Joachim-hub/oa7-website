@@ -45,7 +45,7 @@ export default function AboutPage() {
       />
 
       {/* Brand philosophy */}
-      <section className="py-24 md:py-30" aria-labelledby="philosophy-heading">
+      <section className="py-16 md:py-24 lg:py-30" aria-labelledby="philosophy-heading">
         <div className="container-oa7">
           <SectionHeader eyebrow="Brand philosophy" title="How we think about design" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">{PHILOSOPHY}</p>

@@ -15,7 +15,7 @@ export function MissionVision({ mission, vision }: MissionVisionProps) {
   ];
 
   return (
-    <section className="py-24 md:py-30" aria-labelledby="mission-vision-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="mission-vision-heading">
       <div className="container-oa7">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {cards.map((card, i) => (

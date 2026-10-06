@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { ThemeProvider } from "@/components/shared/ThemeProvider";
 import { SITE } from "@/constants/site";
 import "./globals.css";
 
@@ -39,25 +38,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`dark ${inter.variable}`}>
-      <head>
-        <script
-          // Runs before paint so a returning visitor who chose light mode
-          // doesn't see a flash of dark first. Kept intentionally tiny.
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var t=localStorage.getItem('oa7-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}document.documentElement.classList.remove('light','dark');document.documentElement.classList.add(t);}catch(e){}})();`,
-          }}
-        />
-      </head>
+    <html lang="en" className={inter.variable}>
       <body className="font-sans antialiased">
-        <ThemeProvider>
-          <a href="#main-content" className="skip-link">
-            Skip to content
-          </a>
-          <Navbar />
-          <main id="main-content">{children}</main>
-          <Footer />
-        </ThemeProvider>
+        <a href="#main-content" className="skip-link">
+          Skip to content
+        </a>
+        <Navbar />
+        <main id="main-content">{children}</main>
+        <Footer />
       </body>
     </html>
   );

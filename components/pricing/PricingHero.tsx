@@ -23,7 +23,7 @@ export function PricingHero() {
   const maxPrice = Math.max(...fixedPriced);
 
   return (
-    <section className="relative overflow-hidden pb-20 pt-32 md:pb-24 md:pt-40">
+    <section className="relative overflow-hidden pb-14 pt-24 md:pb-16 md:pt-28 lg:pb-24 lg:pt-40">
       <div className="container-oa7 grid grid-cols-1 gap-16 lg:grid-cols-2 lg:items-center">
         <motion.div variants={container} initial="hidden" animate="show">
           <motion.div variants={item}>

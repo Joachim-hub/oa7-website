@@ -19,11 +19,11 @@ export function ProblemsSolved({
   description = "Before we talk about what we build, here's what we're building against.",
 }: ProblemsSolvedProps) {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="problems-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="problems-heading">
       <div className="container-oa7">
         <SectionHeader eyebrow={eyebrow} title={title} description={description} />
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {problems.map((problem, i) => (
             <motion.div
               key={problem.title}

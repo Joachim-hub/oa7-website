@@ -15,7 +15,7 @@ export function Pagination({ currentPage, totalPages, onChange }: PaginationProp
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   return (
-    <nav aria-label="Templates pagination" className="mt-12 flex items-center justify-center gap-1.5">
+    <nav aria-label="Templates pagination" className="mt-8 md:mt-12 flex items-center justify-center gap-1.5">
       <button
         type="button"
         onClick={() => onChange(currentPage - 1)}

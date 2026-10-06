@@ -21,7 +21,7 @@ export default function ServicesPage() {
           description="From a first prototype to the system it takes to keep a product running, every engagement draws on the same team. No handoffs between agencies, no gaps in ownership."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service) => (
             <ServiceCard key={service.slug} service={service} />
           ))}

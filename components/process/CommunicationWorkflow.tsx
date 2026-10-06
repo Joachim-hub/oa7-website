@@ -13,7 +13,7 @@ const CHANNEL_ICONS: Record<string, typeof Mail> = {
 
 export function CommunicationWorkflow({ channels }: { channels: CommunicationChannel[] }) {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="communication-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="communication-heading">
       <div className="container-oa7">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader

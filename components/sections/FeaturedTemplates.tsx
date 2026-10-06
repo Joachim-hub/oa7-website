@@ -11,7 +11,7 @@ export function FeaturedTemplates() {
   const featured = TEMPLATES.filter((t) => t.featured);
 
   return (
-    <section className="py-24 md:py-30" aria-labelledby="featured-templates-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="featured-templates-heading">
       <div className="container-oa7">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeader
@@ -25,7 +25,7 @@ export function FeaturedTemplates() {
           </Button>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((template, i) => (
             <motion.div
               key={template.slug}

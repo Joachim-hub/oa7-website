@@ -6,14 +6,14 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function PricingPolicies({ policies }: { policies: PolicyItem[] }) {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="policies-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="policies-heading">
       <div className="container-oa7">
         <SectionHeader
           eyebrow="The fine print, in plain language"
           title="Revisions, support, and payment"
         />
 
-        <dl className="mt-12 divide-y divide-border-subtle border-y border-border-subtle">
+        <dl className="mt-8 md:mt-12 divide-y divide-border-subtle border-y border-border-subtle">
           {policies.map((policy, i) => (
             <motion.div
               key={policy.title}

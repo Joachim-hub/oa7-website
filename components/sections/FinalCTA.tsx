@@ -7,7 +7,7 @@ import { SignalField } from "@/components/shared/SignalField";
 
 export function FinalCTA() {
   return (
-    <section className="relative overflow-hidden py-24 md:py-30" aria-labelledby="final-cta-heading">
+    <section className="relative overflow-hidden py-16 md:py-24 lg:py-30" aria-labelledby="final-cta-heading">
       <div className="pointer-events-none absolute inset-0 opacity-30">
         <SignalField className="h-full w-full" />
       </div>

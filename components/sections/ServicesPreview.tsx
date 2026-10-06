@@ -7,7 +7,7 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 
 export function ServicesPreview() {
   return (
-    <section className="py-24 md:py-30">
+    <section className="py-16 md:py-24 lg:py-30">
       <div className="container-oa7">
         <SectionHeader
           eyebrow="What we do"
@@ -15,7 +15,7 @@ export function ServicesPreview() {
           description="Every engagement draws on the same team. No handoffs between agencies, no gaps in ownership."
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {SERVICES.map((service, i) => (
             <motion.div
               key={service.slug}

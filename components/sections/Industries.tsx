@@ -4,7 +4,7 @@ import { IndustryGrid } from "@/components/shared/IndustryGrid";
 
 export function Industries() {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="industries-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="industries-heading">
       <div className="container-oa7">
         <SectionHeader
           eyebrow="Industries"
@@ -13,7 +13,7 @@ export function Industries() {
           align="center"
           className="mx-auto"
         />
-        <div className="mt-12">
+        <div className="mt-8 md:mt-12">
           <IndustryGrid industries={INDUSTRIES} />
         </div>
       </div>

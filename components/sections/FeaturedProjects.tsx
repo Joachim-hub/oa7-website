@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/Button";
 
 export function FeaturedProjects() {
   return (
-    <section className="bg-surface-raised py-24 md:py-30" aria-labelledby="featured-projects-heading">
+    <section className="bg-surface-raised py-16 md:py-24 lg:py-30" aria-labelledby="featured-projects-heading">
       <div className="container-oa7">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeader
@@ -23,7 +23,7 @@ export function FeaturedProjects() {
           </Button>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
           {PROJECTS.map((project, i) => (
             <motion.div
               key={project.slug}

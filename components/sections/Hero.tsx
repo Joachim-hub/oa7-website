@@ -20,7 +20,7 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pb-24 pt-40 md:pb-32 md:pt-48">
+    <section className="relative overflow-hidden pb-16 pt-28 md:pb-20 md:pt-32 lg:pb-32 lg:pt-48">
       <div className="signal-grid-bg pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,black,transparent)]" />
       <SignalField className="pointer-events-none absolute inset-x-0 top-0 h-[720px] opacity-70" />
 

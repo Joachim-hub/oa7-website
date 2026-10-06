@@ -5,7 +5,6 @@ import type { Config } from "tailwindcss";
 // Every step below is a deliberate stop on the brand palette, not an auto-generated ramp.
 
 const config: Config = {
-  darkMode: "class",
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -29,17 +28,14 @@ const config: Config = {
           DEFAULT: "#0A192F",
         },
         secondary: {
-          // 0/50/100/...600 are theme-aware (flip between light/dark via
-          // CSS variables defined in globals.css). 700-900 are rarely used
-          // as fixed dark tones and stay static.
-          0: "rgb(var(--secondary-0) / <alpha-value>)",
-          50: "rgb(var(--secondary-50) / <alpha-value>)",
-          100: "rgb(var(--secondary-100) / <alpha-value>)",
-          200: "rgb(var(--secondary-200) / <alpha-value>)",
-          300: "rgb(var(--secondary-300) / <alpha-value>)",
-          400: "rgb(var(--secondary-400) / <alpha-value>)",
-          500: "rgb(var(--secondary-500) / <alpha-value>)",
-          600: "rgb(var(--secondary-600) / <alpha-value>)",
+          0: "#FFFFFF",
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
+          300: "#CBD5E1",
+          400: "#94A3B8",
+          500: "#8291A8",
+          600: "#6B7A92",
           700: "#334155",
           800: "#1E293B",
           900: "#0F172A",
@@ -50,17 +46,17 @@ const config: Config = {
           100: "#B3FBFF",
           200: "#80F7FF",
           300: "#40F3FF",
-          400: "#00F0FF", // brand base — fixed; used for backgrounds/decoration, contrast doesn't depend on page theme
+          400: "#00F0FF", // brand base
           500: "#00C7D4",
           600: "#009DA8",
           700: "#00747C",
           800: "#004B50",
           900: "#002327",
-          // Theme-aware variant used only where accent is a TEXT/icon
-          // color against the page surface (eyebrows, icons, badge text).
-          // Bright cyan reads fine on dark; on light it needs to darken
-          // to hold AA contrast, so this one shade flips independently.
-          ink: "rgb(var(--accent-ink) / <alpha-value>)",
+          // Kept as a distinct token (rather than reverting every usage
+          // back to accent.400) since it's used specifically where accent
+          // is a text/icon color, which is a meaningful distinction to
+          // keep named even in a single-theme site.
+          ink: "#00F0FF",
           DEFAULT: "#00F0FF",
         },
         neutral: {
@@ -81,35 +77,33 @@ const config: Config = {
           light: "#E4FBF3",
           DEFAULT: "#16C784",
           dark: "#0E7D53",
-          ink: "rgb(var(--success-ink) / <alpha-value>)",
+          ink: "#16C784",
         },
         warning: {
           light: "#FEF3DC",
           DEFAULT: "#F5A623",
           dark: "#A8690A",
-          ink: "rgb(var(--warning-ink) / <alpha-value>)",
+          ink: "#F5A623",
         },
         error: {
           light: "#FDE7E7",
           DEFAULT: "#F5484B",
           dark: "#A82426",
-          ink: "rgb(var(--error-ink) / <alpha-value>)",
+          ink: "#F5484B",
         },
         // A fixed dark tone used for text sitting ON TOP of accent-colored
-        // backgrounds (e.g. button labels) — deliberately NOT theme-aware,
-        // since accent-400 as a background stays bright in both themes and
-        // always needs dark text over it regardless of page theme.
+        // backgrounds (e.g. button labels).
         ink: "#0A192F",
         surface: {
-          base: "rgb(var(--surface-base) / <alpha-value>)",
-          raised: "rgb(var(--surface-raised) / <alpha-value>)",
-          overlay: "rgb(var(--surface-overlay) / <alpha-value>)",
-          sunken: "rgb(var(--surface-sunken) / <alpha-value>)",
+          base: "#0A192F",
+          raised: "#0F2138",
+          overlay: "#142A42",
+          sunken: "#071322",
         },
         border: {
-          subtle: "rgba(var(--border-rgb), 0.08)",
-          DEFAULT: "rgba(var(--border-rgb), 0.14)",
-          strong: "rgba(var(--border-rgb), 0.24)",
+          subtle: "rgba(226,232,240,0.08)",
+          DEFAULT: "rgba(226,232,240,0.14)",
+          strong: "rgba(226,232,240,0.24)",
           accent: "rgba(0,240,255,0.35)",
         },
       },

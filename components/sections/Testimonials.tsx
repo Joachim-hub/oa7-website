@@ -6,7 +6,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 
 export function Testimonials() {
   return (
-    <section className="py-24 md:py-30" aria-labelledby="testimonials-heading">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="testimonials-heading">
       <div className="container-oa7">
         <SectionHeader
           eyebrow="Client feedback"
@@ -15,7 +15,7 @@ export function Testimonials() {
           className="mx-auto"
         />
 
-        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="mt-8 md:mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
           {[0, 1, 2].map((i) => (
             <motion.div
               key={i}

@@ -2,12 +2,12 @@ import { SERVICES_DETAIL } from "@/data/services-detail";
 
 export const SITE = {
   name: "OA7",
-  legalName: "OA7 Technologies",
+  legalName: "OA7 Software",
   tagline: "Technology, built to be trusted.",
   description:
     "OA7 designs and builds premium websites, mobile applications, and enterprise software for startups and established businesses.",
   url: "https://oa7.dev",
-  email: "hello@oa7.dev",
+  email: "contact@oa7software.com",
   whatsapp: "+233000000000",
 };
 
