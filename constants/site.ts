@@ -7,8 +7,8 @@ export const SITE = {
   description:
     "OA7 designs and builds premium websites, mobile applications, and enterprise software for startups and established businesses.",
   url: "https://oa7.dev",
-  email: "contact@oa7software.com",
-  whatsapp: "+233000000000",
+  email: "oa7software@gmail.com",
+  whatsapp: "+233596210523",
 };
 
 const SERVICE_NAV_ITEMS = SERVICES_DETAIL.map((s) => ({
