@@ -21,17 +21,17 @@ export function FinalCTA() {
           className="mx-auto max-w-2xl rounded-2xl border border-border-subtle bg-surface-raised px-8 py-16 text-center shadow-raised md:px-16"
         >
           <h2 id="final-cta-heading" className="text-3xl font-semibold tracking-tight text-secondary-0 md:text-4xl">
-            Have a project in mind?
+            Want to talk?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-secondary-400">
-            Tell us what you&rsquo;re building. We&rsquo;ll follow up with a clear scope and timeline. No obligation.
+            Whether you are hiring, have a small project in mind, or want to collaborate, send me a message. I reply by email.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Button href="/contact" size="lg" iconRight={<ArrowRight className="h-4 w-4" />}>
-              Start a project
+              Get in touch
             </Button>
-            <Button href="/pricing" variant="outline" size="lg">
-              See pricing
+            <Button href="/portfolio" variant="outline" size="lg">
+              View projects
             </Button>
           </div>
         </motion.div>

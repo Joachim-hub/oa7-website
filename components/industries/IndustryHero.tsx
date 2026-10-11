@@ -70,10 +70,10 @@ export function IndustryHero({ slug, name, icon, tagline, description }: Industr
               size="lg"
               iconRight={<ArrowRight className="h-4 w-4" />}
             >
-              Start a project
+              Get in touch
             </Button>
             <Button href="/templates" variant="outline" size="lg">
-              Browse templates
+              See the concepts
             </Button>
           </motion.div>
         </motion.div>

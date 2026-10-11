@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalLayout title="Privacy Policy" lastUpdated="October 5, 2026">
+    <LegalLayout title="Privacy Policy" lastUpdated="October 10, 2026">
       <p className="text-base leading-relaxed text-secondary-300">
         This policy explains how {SITE.legalName} (“OA7,” “we,” “us”) handles
         information collected through this website and through Hitz Play, our
@@ -21,9 +21,10 @@ export default function PrivacyPolicyPage() {
       <LegalSection title="OA7 Website">
         <LegalSection title="What we collect">
           <p>
-            When you use the contact form, we collect your name, email address,
-            the project type you select, and whatever you write in the message
-            field. That’s the only information this site actively asks for.
+            This site does not collect or store anything itself. The contact form does not send data
+            to a server: it opens your email app with a message addressed to {SITE.email}. If you
+            then send that email, I receive the name, email address and message you wrote, as I
+            would any email.
           </p>
 
           <p>
@@ -34,16 +35,15 @@ export default function PrivacyPolicyPage() {
           </p>
 
           <p>
-            The site also stores a single, non-identifying preference in your
-            browser: whether you’ve chosen light or dark mode. See the{" "}
-            <a href="/legal/cookies">Cookie Policy</a> for detail on that.
+            The site does not store any preference or identifier in your
+            browser. See the <a href="/legal/cookies">Cookie Policy</a> for detail.
           </p>
         </LegalSection>
 
         <LegalSection title="How we use it">
           <p>
-            Contact form submissions are used to respond to your inquiry and,
-            if you become a client, to deliver the project we agree on. We
+            Emails you send are used to respond to your inquiry and,
+            if we work together, to deliver the project we agree on. We
             don’t sell, rent, or share your information with third parties for
             marketing, and we don’t currently run any advertising or analytics
             tracking on this site.
@@ -52,7 +52,7 @@ export default function PrivacyPolicyPage() {
 
         <LegalSection title="Data retention">
           <p>
-            We keep contact form submissions and project-related correspondence
+            We keep emails and project-related correspondence
             for as long as it’s relevant to the inquiry or project, and
             generally no longer than a few years afterward for our own records.
             You can ask us to delete your information at any point, see below.

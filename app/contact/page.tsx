@@ -8,7 +8,8 @@ import { ContactChannels } from "@/components/contact/ContactChannels";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Tell OA7 what you're building. We'll follow up with questions, not a sales pitch.",
+  description:
+    "Contact Joachim Osafo Amoateng of OA7 Software by email, LinkedIn or GitHub, about a role, a project or a collaboration.",
 };
 
 export default function ContactPage() {
@@ -16,7 +17,7 @@ export default function ContactPage() {
     <div className="pb-24 md:pb-30">
       <ContactHero />
 
-      <section className="py-4 md:py-6" aria-labelledby="contact-form-heading">
+      <section className="py-4 md:py-6" aria-label="Contact form">
         <div className="container-oa7 grid grid-cols-1 gap-10 lg:grid-cols-[1.6fr_1fr]">
           <Suspense fallback={<div className="h-96" aria-hidden="true" />}>
             <ContactPageContent />

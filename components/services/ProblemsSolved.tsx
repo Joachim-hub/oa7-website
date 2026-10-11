@@ -16,12 +16,12 @@ export function ProblemsSolved({
   problems,
   eyebrow = "The problem",
   title = "What usually goes wrong here",
-  description = "Before we talk about what we build, here's what we're building against.",
+  description = "The problems this kind of work usually runs into.",
 }: ProblemsSolvedProps) {
   return (
     <section className="py-16 md:py-24 lg:py-30" aria-labelledby="problems-heading">
       <div className="container-oa7">
-        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
+        <SectionHeader id="problems-heading" eyebrow={eyebrow} title={title} description={description} />
 
         <div className="mt-8 md:mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {problems.map((problem, i) => (

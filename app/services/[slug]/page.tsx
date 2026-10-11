@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { SERVICES_DETAIL, getServiceBySlug } from "@/data/services-detail";
 import { getIndustryBySlug } from "@/data/industries";
-import { getTemplateBySlug } from "@/data/templates";
 import { getProjectBySlug } from "@/data/projects";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ServiceHero } from "@/components/services/ServiceHero";
@@ -14,7 +13,6 @@ import { RelevantIndustries } from "@/components/services/RelevantIndustries";
 import { ProcessTimeline } from "@/components/shared/ProcessTimeline";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { RelatedProjects } from "@/components/shared/RelatedProjects";
-import { RelatedTemplates } from "@/components/shared/RelatedTemplates";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 interface PageProps {
@@ -47,10 +45,6 @@ export default function ServiceDetailsPage({ params }: PageProps) {
     .map((slug) => getIndustryBySlug(slug))
     .filter((i): i is NonNullable<typeof i> => Boolean(i));
 
-  const relatedTemplates = service.relatedTemplateSlugs
-    .map((slug) => getTemplateBySlug(slug))
-    .filter((t): t is NonNullable<typeof t> => Boolean(t));
-
   const relatedProjects = service.relatedProjectSlugs
     .map((slug) => getProjectBySlug(slug))
     .filter((p): p is NonNullable<typeof p> => Boolean(p));
@@ -63,43 +57,63 @@ export default function ServiceDetailsPage({ params }: PageProps) {
         icon={service.icon}
         tagline={service.tagline}
         description={service.heroDescription}
+        status={service.status}
+        statusNote={service.statusNote}
       />
 
       {/* Overview */}
       <section className="py-4 md:py-6" aria-labelledby="overview-heading">
         <div className="container-oa7">
-          <SectionHeader eyebrow="Overview" title="How we approach this" className="max-w-3xl" />
+          <SectionHeader id="overview-heading" eyebrow="Overview" title="Where this stands" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">
             {service.overview}
           </p>
         </div>
       </section>
 
-      <ProblemsSolved problems={service.problems} />
-      <BenefitsSection benefits={service.benefits} />
-      <ServiceFeatureGrid features={service.features} />
-      <TechnologyStack stack={service.techStack} />
+      {service.problems.length > 0 && <ProblemsSolved problems={service.problems} />}
+      {service.benefits.length > 0 && (
+        <BenefitsSection
+          benefits={service.benefits}
+          eyebrow="What to expect"
+          title="What I focus on"
+          description="The things I pay attention to in this kind of work."
+        />
+      )}
+      {service.features.length > 0 && (
+        <ServiceFeatureGrid
+          features={service.features}
+          eyebrow="Experience"
+          title={service.featuresTitle}
+        />
+      )}
+      {service.techStack.length > 0 && (
+        <TechnologyStack stack={service.techStack} eyebrow="Tools" title="Technologies" />
+      )}
 
-      <ProcessTimeline
-        eyebrow="How we work"
-        title={`Our process for ${service.name.toLowerCase()}`}
-        description="You'll always know what stage your project is in and what happens next."
-        steps={service.process}
-      />
+      {service.process.length > 0 && (
+        <ProcessTimeline
+          eyebrow="How I approach it"
+          title={`My approach to ${service.name.toLowerCase()}`}
+          description="A simple outline of how I go about it."
+          steps={service.process}
+        />
+      )}
 
       <RelevantIndustries industries={industries} note={service.industryNote} />
 
-      <FAQSection
-        items={service.faqs.map((faq, i) => ({
-          id: `faq-${i}`,
-          question: faq.question,
-          answer: faq.answer,
-        }))}
-      />
+      {service.faqs.length > 0 && (
+        <FAQSection
+          items={service.faqs.map((faq, i) => ({
+            id: `faq-${i}`,
+            question: faq.question,
+            answer: faq.answer,
+          }))}
+        />
+      )}
 
       <div className="container-oa7">
-        <RelatedProjects projects={relatedProjects} />
-        <RelatedTemplates templates={relatedTemplates} />
+        <RelatedProjects projects={relatedProjects} title="Related projects" />
       </div>
 
       <div className="mt-24">

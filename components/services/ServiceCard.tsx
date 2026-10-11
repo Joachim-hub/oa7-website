@@ -2,7 +2,9 @@ import Link from "next/link";
 import { Globe, Smartphone, Building2, Sparkles, Figma, Wrench, Workflow, ArrowUpRight } from "lucide-react";
 import type { Service } from "@/data/services";
 import type { ServiceIcon } from "@/data/services-detail";
+import { serviceStatusVariant } from "@/data/services";
 import { Card } from "@/components/ui/Card";
+import { Badge } from "@/components/ui/Badge";
 
 const ICONS: Record<ServiceIcon, typeof Globe> = {
   globe: Globe,
@@ -31,6 +33,9 @@ export function ServiceCard({ service }: { service: Service }) {
           />
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-secondary-500">{service.summary}</p>
+        <div className="mt-4">
+          <Badge variant={serviceStatusVariant(service.status)}>{service.status}</Badge>
+        </div>
       </Card>
     </Link>
   );

@@ -32,20 +32,20 @@ export function AboutHero() {
             variants={item}
             className="mt-6 text-4xl font-semibold leading-[1.1] tracking-tight text-secondary-0 md:text-6xl"
           >
-            Software built with the same discipline as everything else on this site.
+            Practical software, built and described honestly.
           </motion.h1>
 
           <motion.p variants={item} className="mt-6 max-w-xl text-lg leading-relaxed text-secondary-400">
-            OA7 exists to bring real engineering rigor to businesses that don&rsquo;t usually get access to it.
-            not just for the products we sell, but for how we run the company behind them.
+            OA7 Software is the independent software initiative of Joachim Osafo Amoateng, a Mathematics
+            graduate building websites and mobile apps to develop real, practical skills.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
-            <Button href="/contact" size="lg" iconRight={<ArrowRight className="h-4 w-4" />}>
-              Start a project
+            <Button href="/portfolio" size="lg" iconRight={<ArrowRight className="h-4 w-4" />}>
+              View projects
             </Button>
-            <Button href="/portfolio" variant="outline" size="lg">
-              See our work
+            <Button href="/contact" variant="outline" size="lg">
+              Get in touch
             </Button>
           </motion.div>
         </motion.div>

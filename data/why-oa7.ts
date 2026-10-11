@@ -1,28 +1,32 @@
 export interface Reason {
-  icon: "users" | "gauge" | "shield" | "headset";
+  icon: "message" | "sigma" | "hammer" | "shield";
   title: string;
   description: string;
 }
 
 export const WHY_OA7: Reason[] = [
   {
-    icon: "users",
-    title: "One team, start to finish",
-    description: "No handoffs between agencies. The people who design your product are the ones who build and ship it.",
+    icon: "message",
+    title: "Direct communication",
+    description:
+      "OA7 is a one-person initiative. You talk to the person doing the work, with no hand-offs and no account managers.",
   },
   {
-    icon: "gauge",
-    title: "Built for real load",
-    description: "Every project is engineered for performance from day one, not optimized after the fact.",
+    icon: "sigma",
+    title: "An analytical approach",
+    description:
+      "My Mathematics background shapes how I break a problem into parts, check assumptions and test the result.",
+  },
+  {
+    icon: "hammer",
+    title: "Learning by building",
+    description:
+      "I build and test real projects, including apps in Google Play closed testing, and improve with each one.",
   },
   {
     icon: "shield",
-    title: "Direct communication",
-    description: "You talk to the person doing the work, not an account manager relaying messages.",
-  },
-  {
-    icon: "headset",
-    title: "Support after launch",
-    description: "Launch day isn't the finish line. We stay on to fix, refine, and extend what we've built.",
+    title: "Honest about experience",
+    description:
+      "My work so far is independent projects, and I describe it that way. I would rather show you what exists than overstate it.",
   },
 ];

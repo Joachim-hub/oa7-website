@@ -2,7 +2,7 @@ import type { Template } from "@/data/templates";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { TemplateGrid } from "@/components/ui/TemplateGrid";
 
-export function RelatedTemplates({ templates, title = "Related templates" }: { templates: Template[]; title?: string }) {
+export function RelatedTemplates({ templates, title = "Related concepts" }: { templates: Template[]; title?: string }) {
   if (templates.length === 0) return null;
 
   return (

@@ -1,11 +1,21 @@
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Badge } from "@/components/ui/Badge";
 
-export function TechnologyStack({ stack }: { stack: string[] }) {
+interface TechnologyStackProps {
+  stack: string[];
+  eyebrow?: string;
+  title?: string;
+}
+
+export function TechnologyStack({
+  stack,
+  eyebrow = "Under the hood",
+  title = "Technology stack",
+}: TechnologyStackProps) {
   return (
     <section className="py-16 md:py-24 lg:py-30" aria-labelledby="tech-stack-heading">
       <div className="container-oa7">
-        <SectionHeader eyebrow="Under the hood" title="Technology stack" />
+        <SectionHeader id="tech-stack-heading" eyebrow={eyebrow} title={title} />
         <ul className="mt-8 md:mt-12 flex flex-wrap gap-2.5">
           {stack.map((tech) => (
             <li key={tech}>

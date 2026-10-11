@@ -4,9 +4,9 @@ import { ProcessTimeline } from "@/components/shared/ProcessTimeline";
 export function Process() {
   return (
     <ProcessTimeline
-      eyebrow="How we work"
-      title="A process built for visibility, not surprises."
-      description="You'll always know what stage your project is in and what happens next."
+      eyebrow="How I work"
+      title="A simple process from idea to release."
+      description="The approach I follow on my own projects."
       steps={PROCESS_STEPS}
     />
   );

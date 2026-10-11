@@ -7,7 +7,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Website development, mobile apps, enterprise software, AI solutions, UI/UX design, and maintenance & support, all from one team.",
+    "What OA7 Software builds: websites and mobile apps with hands-on project experience, data analysis and design as developing skills, and other areas not yet offered.",
 };
 
 export default function ServicesPage() {
@@ -16,9 +16,9 @@ export default function ServicesPage() {
       <div className="container-oa7">
         <SectionHeader
           as="h1"
-          eyebrow="Services"
-          title="Seven disciplines, one accountable team."
-          description="From a first prototype to the system it takes to keep a product running, every engagement draws on the same team. No handoffs between agencies, no gaps in ownership."
+          eyebrow="What I build"
+          title="What I build, and how much experience is behind it."
+          description="Each area shows its real status. Some are hands-on, with independent projects to show. Some are skills I am still developing. Some are not yet offered."
         />
 
         <div className="mt-8 md:mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">

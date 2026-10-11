@@ -7,6 +7,7 @@ import { getIndustryBySlug } from "@/data/industries";
 import { getProjectBySlug } from "@/data/projects";
 import { INTENT_LABELS } from "@/data/contact";
 import { ContactForm } from "@/components/contact/ContactForm";
+import type { ContactReason } from "@/components/contact/ContactForm";
 
 function resolveSubject(params: URLSearchParams): string | null {
   const template = params.get("template");
@@ -21,10 +22,11 @@ function resolveSubject(params: URLSearchParams): string | null {
   return null;
 }
 
-function resolveProjectType(params: URLSearchParams): "template" | "custom" | "not-sure" {
-  if (params.get("template")) return "template";
-  if (params.get("service") || params.get("industry") || params.get("project")) return "custom";
-  return "not-sure";
+function resolveProjectType(params: URLSearchParams): ContactReason {
+  if (params.get("template") || params.get("service") || params.get("industry") || params.get("project")) {
+    return "project";
+  }
+  return "other";
 }
 
 export function ContactPageContent() {
@@ -41,8 +43,8 @@ export function ContactPageContent() {
     <div>
       {subject && (
         <p className="mb-6 rounded-lg border border-accent-ink/25 bg-accent-400/5 px-4 py-3 text-sm text-secondary-200">
-          Reaching out about <span className="font-semibold text-secondary-0">{subject}</span>. We&rsquo;ve
-          started your message below, feel free to change it.
+          Reaching out about <span className="font-semibold text-secondary-0">{subject}</span>. I
+          have started your message below. Feel free to change it.
         </p>
       )}
       <ContactForm defaultMessage={contextLine} defaultProjectType={projectType} />

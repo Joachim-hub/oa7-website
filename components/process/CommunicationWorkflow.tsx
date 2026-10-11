@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MessageCircle, Video } from "lucide-react";
+import { Mail, Linkedin, Github } from "lucide-react";
 import type { CommunicationChannel } from "@/data/process";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 
 const CHANNEL_ICONS: Record<string, typeof Mail> = {
   Email: Mail,
-  WhatsApp: MessageCircle,
-  "Scheduled calls": Video,
+  LinkedIn: Linkedin,
+  GitHub: Github,
 };
 
 export function CommunicationWorkflow({ channels }: { channels: CommunicationChannel[] }) {
@@ -17,9 +17,10 @@ export function CommunicationWorkflow({ channels }: { channels: CommunicationCha
       <div className="container-oa7">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <SectionHeader
+            id="communication-heading"
             eyebrow="Staying in touch"
-            title="Communication, without the noise"
-            description="You'll always know what channel to use and when to expect a reply, instead of guessing whether a message landed."
+            title="Where to find me"
+            description="Email is the best way to reach me. These are the places I am active."
           />
 
           <ul className="divide-y divide-border-subtle border-y border-border-subtle">

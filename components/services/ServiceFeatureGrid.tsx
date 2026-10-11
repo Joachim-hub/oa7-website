@@ -18,7 +18,7 @@ export function ServiceFeatureGrid({
   return (
     <section className="py-16 md:py-24 lg:py-30" aria-labelledby="features-heading">
       <div className="container-oa7">
-        <SectionHeader eyebrow={eyebrow} title={title} />
+        <SectionHeader id="features-heading" eyebrow={eyebrow} title={title} />
 
         <ul className="mt-8 md:mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
           {features.map((feature, i) => (

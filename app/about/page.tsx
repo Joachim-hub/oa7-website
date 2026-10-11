@@ -18,7 +18,7 @@ import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `The story, mission, and values behind ${SITE.name}.`,
+  description: `Who is behind ${SITE.name}: Joachim Osafo Amoateng, a Mathematics graduate and independent software developer in Ghana. His background, values and current projects.`,
 };
 
 export default function AboutPage() {
@@ -29,7 +29,7 @@ export default function AboutPage() {
       {/* Story */}
       <section className="py-4 md:py-6" aria-labelledby="story-heading">
         <div className="container-oa7">
-          <SectionHeader eyebrow="Our story" title="Why OA7 exists" className="max-w-3xl" />
+          <SectionHeader id="story-heading" eyebrow="My story" title="About OA7 Software" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">{STORY}</p>
         </div>
       </section>
@@ -38,16 +38,16 @@ export default function AboutPage() {
 
       <BenefitsSection
         benefits={CORE_VALUES}
-        eyebrow="What we stand for"
+        eyebrow="What I try to work by"
         title="Core values"
-        description="The principles that shape how every project gets scoped, built, and delivered."
+        description="The principles I try to follow when I build and describe my work."
         columns={3}
       />
 
       {/* Brand philosophy */}
       <section className="py-16 md:py-24 lg:py-30" aria-labelledby="philosophy-heading">
         <div className="container-oa7">
-          <SectionHeader eyebrow="Brand philosophy" title="How we think about design" className="max-w-3xl" />
+          <SectionHeader id="philosophy-heading" eyebrow="Philosophy" title="How I think about software" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">{PHILOSOPHY}</p>
         </div>
       </section>
@@ -57,22 +57,26 @@ export default function AboutPage() {
       <FounderSection name={FOUNDER.name} role={FOUNDER.role} bio={FOUNDER.bio} />
 
       <ProcessTimeline
-        eyebrow="How we work"
-        title="A process built for visibility, not surprises."
-        description="You'll always know what stage your project is in and what happens next."
+        eyebrow="How I work"
+        title="A simple, visible process"
+        description="How I approach a project, from first conversation to release."
         steps={PROCESS_STEPS}
         variant="base"
       />
 
       <ProcessTimeline
-        eyebrow="Where we're headed"
-        title="Company timeline"
-        description="OA7 is early. Here's where things stand and what's next, without pretending otherwise."
+        eyebrow="Where things stand"
+        title="Timeline"
+        description="OA7 is early-stage. This is where things stand today."
         steps={COMPANY_TIMELINE}
         variant="raised"
       />
 
-      <TechnologyStack stack={ABOUT_TECH_STACK} />
+      <TechnologyStack
+        stack={ABOUT_TECH_STACK}
+        eyebrow="Skills"
+        title="Technologies I've learned and used"
+      />
 
       <FAQSection
         items={ABOUT_FAQ.map((faq, i) => ({ id: `faq-${i}`, question: faq.question, answer: faq.answer }))}

@@ -7,7 +7,7 @@ export function RelatedServices({ services, title = "Related services" }: { serv
 
   return (
     <div className="mt-24">
-      <SectionHeader eyebrow="How we can help" title={title} />
+      <SectionHeader eyebrow="Related areas" title={title} />
       <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {services.map((service) => (
           <ServiceCard key={service.slug} service={service} />

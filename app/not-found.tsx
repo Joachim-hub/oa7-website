@@ -3,10 +3,10 @@ import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 const QUICK_LINKS = [
-  { label: "Templates", href: "/templates", description: "Browse ready-to-launch templates" },
-  { label: "Portfolio", href: "/portfolio", description: "See what we've built" },
-  { label: "Services", href: "/services", description: "What we do, start to finish" },
-  { label: "Contact", href: "/contact", description: "Tell us what you need" },
+  { label: "Portfolio", href: "/portfolio", description: "Projects and their real status" },
+  { label: "What I Build", href: "/services", description: "Areas of work and experience" },
+  { label: "About", href: "/about", description: "Who is behind OA7" },
+  { label: "Contact", href: "/contact", description: "Email, LinkedIn and GitHub" },
 ];
 
 export default function NotFound() {

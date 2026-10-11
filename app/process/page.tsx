@@ -11,9 +11,9 @@ import { CommunicationWorkflow } from "@/components/process/CommunicationWorkflo
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Our Process",
+  title: "How I Work",
   description:
-    "How OA7 delivers a project from first contact to long-term support: the full ten-stage lifecycle, what you receive at each stage, and how we communicate along the way.",
+    "How Joachim Osafo Amoateng approaches a software project, from understanding the problem to release, and how to get in touch.",
 };
 
 export default function ProcessPage() {
@@ -24,21 +24,19 @@ export default function ProcessPage() {
       {/* Methodology overview */}
       <section className="py-4 md:py-6" aria-labelledby="methodology-heading">
         <div className="container-oa7">
-          <SectionHeader eyebrow="Methodology" title="The same process, every time" className="max-w-3xl" />
+          <SectionHeader id="methodology-heading" eyebrow="Approach" title="A simple process, kept honest" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">
-            Every project, whether it&rsquo;s a single landing page or a multi-portal system, moves through the same
-            ten stages below. What changes is how much time each stage takes, not whether it happens.
-            A stage only gets skipped when it genuinely doesn&rsquo;t apply, like training on a project with
-            nothing for a client to operate. That consistency is what keeps scope, cost, and quality
-            predictable, project to project.
+            This is the approach I follow on my own projects, written down. I have not run it on a
+            client engagement, so I have kept it short and plain. Bigger or more regulated work would
+            need more structure, and I would say so.
           </p>
         </div>
       </section>
 
       <ProcessTimeline
-        eyebrow="The lifecycle"
-        title="Every stage, start to finish"
-        description="What we deliver and what we need from you, at each point along the way."
+        eyebrow="The steps"
+        title="From idea to release"
+        description="What happens at each step and what I would need from you."
         steps={PROJECT_LIFECYCLE}
         layout="vertical"
         variant="base"
@@ -48,8 +46,8 @@ export default function ProcessPage() {
 
       <ServiceFeatureGrid
         features={QUALITY_PRINCIPLES}
-        eyebrow="Quality assurance"
-        title="How we keep quality consistent"
+        eyebrow="What I aim for"
+        title="Standards I hold my work to"
       />
 
       <FAQSection

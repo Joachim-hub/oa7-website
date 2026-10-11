@@ -30,14 +30,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const templateRoutes = TEMPLATES.map((t) => ({
     url: `${SITE.url}/templates/${t.slug}`,
-    lastModified: new Date(t.releasedAt),
+    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));
 
   const portfolioRoutes = PROJECTS.map((p) => ({
     url: `${SITE.url}/portfolio/${p.slug}`,
-    lastModified: new Date(p.date),
+    lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.6,
   }));

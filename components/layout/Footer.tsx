@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { FOOTER_NAV, SITE, SOCIAL_LINKS } from "@/constants/site";
 import { Logo } from "@/components/shared/Logo";
-import { NewsletterForm } from "@/components/shared/NewsletterForm";
 
 const NAV_GROUPS: { title: string; links: typeof FOOTER_NAV.services }[] = [
-  { title: "Services", links: FOOTER_NAV.services },
-  { title: "Resources", links: FOOTER_NAV.resources },
+  { title: "What I Build", links: FOOTER_NAV.services },
+  { title: "Explore", links: FOOTER_NAV.resources },
   { title: "Company", links: FOOTER_NAV.company },
   { title: "Legal", links: FOOTER_NAV.legal },
 ];
@@ -20,9 +19,14 @@ export function Footer() {
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-secondary-500">
               {SITE.description}
             </p>
-            <div className="mt-6 max-w-xs">
-              <NewsletterForm />
-            </div>
+            <p className="mt-4 text-sm">
+              <a
+                href={`mailto:${SITE.email}`}
+                className="text-secondary-300 transition-colors hover:text-accent-ink"
+              >
+                {SITE.email}
+              </a>
+            </p>
           </div>
 
           {/* Two columns on mobile/tablet to cut the footer's scroll height;
@@ -60,8 +64,7 @@ export function Footer() {
               <li key={social.href}>
                 <a
                   href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  {...(social.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   className="text-sm text-secondary-500 transition-colors hover:text-accent-ink"
                 >
                   {social.label}

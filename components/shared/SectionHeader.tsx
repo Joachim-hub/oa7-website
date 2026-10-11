@@ -1,6 +1,8 @@
 import { cn } from "@/lib/utils";
 
 interface SectionHeaderProps {
+  /** Sets the id of the heading so a parent section can reference it with aria-labelledby. */
+  id?: string;
   eyebrow?: string;
   title: string;
   description?: string;
@@ -14,6 +16,7 @@ interface SectionHeaderProps {
 }
 
 export function SectionHeader({
+  id,
   eyebrow,
   title,
   description,
@@ -32,7 +35,7 @@ export function SectionHeader({
       )}
     >
       {eyebrow && <p className="eyebrow mb-3">{eyebrow}</p>}
-      <Heading className="text-3xl font-semibold tracking-tight text-secondary-0 md:text-4xl">
+      <Heading id={id} className="text-3xl font-semibold tracking-tight text-secondary-0 md:text-4xl">
         {title}
       </Heading>
       {description && (

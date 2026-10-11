@@ -7,9 +7,10 @@ export function Industries() {
     <section className="py-16 md:py-24 lg:py-30" aria-labelledby="industries-heading">
       <div className="container-oa7">
         <SectionHeader
-          eyebrow="Industries"
-          title="Built for how your industry actually works."
-          description="Every industry has its own workflows and expectations. Our starting points already account for them."
+          id="industries-heading"
+          eyebrow="Sectors"
+          title="Website ideas by sector."
+          description="Concepts and sector notes, not past client work."
           align="center"
           className="mx-auto"
         />

@@ -5,9 +5,9 @@ import { IndustryGrid } from "@/components/shared/IndustryGrid";
 import { FinalCTA } from "@/components/sections/FinalCTA";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Sectors",
   description:
-    "Websites, apps, and internal systems built around how car dealerships, hospitals, schools, hotels, and other industries actually operate.",
+    "Sector notes and website ideas for car dealerships, hospitals, schools, hotels and other sectors. These are concepts, not past client work.",
 };
 
 export default function IndustriesPage() {
@@ -16,9 +16,9 @@ export default function IndustriesPage() {
       <div className="container-oa7">
         <SectionHeader
           as="h1"
-          eyebrow="Industries"
-          title="Built for how your industry actually works."
-          description="Every industry has its own workflows and expectations. Pick yours to see what we typically build and where to start."
+          eyebrow="Sectors"
+          title="Website ideas by sector."
+          description="Notes on what a website in each sector could include. These are concepts and general observations. I have not done client work in these sectors."
         />
 
         <div className="mt-8 md:mt-12">

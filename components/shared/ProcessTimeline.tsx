@@ -1,5 +1,6 @@
 "use client";
 
+import { useId } from "react";
 import { motion } from "framer-motion";
 import type { ServiceProcessStep } from "@/data/services-detail";
 import type { ProcessStageDetail } from "@/data/process";
@@ -22,13 +23,14 @@ export function ProcessTimeline({
   variant = "raised",
   layout = "horizontal",
 }: ProcessTimelineProps) {
+  const headingId = useId();
   return (
     <section
       className={variant === "raised" ? "bg-surface-raised py-16 md:py-24 lg:py-30" : "py-16 md:py-24 lg:py-30"}
-      aria-labelledby="process-heading"
+      aria-labelledby={headingId}
     >
       <div className="container-oa7">
-        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
+        <SectionHeader id={headingId} eyebrow={eyebrow} title={title} description={description} />
 
         {layout === "vertical" ? (
           <VerticalTimeline steps={steps as ProcessStageDetail[]} />
@@ -40,9 +42,17 @@ export function ProcessTimeline({
   );
 }
 
+// Tailwind needs full class names, so map the step count to a literal.
+const MD_COLUMNS: Record<number, string> = {
+  2: "md:grid-cols-2",
+  3: "md:grid-cols-3",
+  4: "md:grid-cols-4",
+  5: "md:grid-cols-5",
+};
+
 function HorizontalTimeline({ steps }: { steps: ServiceProcessStep[] }) {
   return (
-    <ol className="relative mt-16 grid grid-cols-1 gap-10 md:grid-cols-5 md:gap-6">
+    <ol className={`relative mt-16 grid grid-cols-1 gap-10 md:gap-6 ${MD_COLUMNS[steps.length] ?? "md:grid-cols-5"}`}>
       <div
         className="absolute left-0 right-0 top-6 hidden h-px bg-border-DEFAULT md:block"
         aria-hidden="true"

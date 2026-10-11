@@ -17,13 +17,13 @@ export function BenefitsSection({
   benefits,
   eyebrow = "Why it works",
   title = "Key benefits",
-  description = "What you actually get from working with us on this.",
+  description = "What to expect from this kind of work.",
   columns = 2,
 }: BenefitsSectionProps) {
   return (
     <section className="bg-surface-raised py-16 md:py-24 lg:py-30" aria-labelledby="benefits-heading">
       <div className="container-oa7">
-        <SectionHeader eyebrow={eyebrow} title={title} description={description} />
+        <SectionHeader id="benefits-heading" eyebrow={eyebrow} title={title} description={description} />
 
         <dl
           className={

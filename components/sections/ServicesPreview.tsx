@@ -7,12 +7,13 @@ import { ServiceCard } from "@/components/services/ServiceCard";
 
 export function ServicesPreview() {
   return (
-    <section className="py-16 md:py-24 lg:py-30">
+    <section className="py-16 md:py-24 lg:py-30" aria-labelledby="services-heading">
       <div className="container-oa7">
         <SectionHeader
-          eyebrow="What we do"
-          title="Seven disciplines, one standard."
-          description="Every engagement draws on the same team. No handoffs between agencies, no gaps in ownership."
+          id="services-heading"
+          eyebrow="What I build"
+          title="Websites and mobile apps, plus skills I'm developing."
+          description="Each area shows how much real experience is behind it. Hands-on means I have independent projects to show. Developing means I am still building that skill. Not yet offered means it is not something I do yet."
         />
 
         <div className="mt-8 md:mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">

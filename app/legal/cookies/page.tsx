@@ -10,34 +10,24 @@ export const metadata: Metadata = {
 
 export default function CookiePolicyPage() {
   return (
-    <LegalLayout title="Cookie Policy" lastUpdated="July 19, 2026">
+    <LegalLayout title="Cookie Policy" lastUpdated="October 10, 2026">
       <p className="text-base leading-relaxed text-secondary-300">
-        This is a short one, because this site doesn&rsquo;t use tracking cookies, advertising
-        cookies, or third-party analytics. Here&rsquo;s what it actually stores.
+        This is a short one. The site&rsquo;s own code does not set cookies or store anything in your
+        browser, and it does not use advertising or analytics tools.
       </p>
 
-      <LegalSection title="Theme preference">
+      <LegalSection title="What this site stores">
         <p>
-          When you switch between light and dark mode, that choice is saved in your browser&rsquo;s
-          local storage under a single key. It stays on your device, isn&rsquo;t sent to our
-          servers, and isn&rsquo;t used to identify or track you. It exists purely so the site
-          remembers your preference the next time you visit.
+          Nothing. There is no login, no tracking and no saved preference. The hosting provider may
+          set technical cookies or log requests as part of serving the site, which is outside the
+          site&rsquo;s own code.
         </p>
       </LegalSection>
 
-      <LegalSection title="What we don't use">
+      <LegalSection title="What is not used">
         <p>
-          No advertising cookies, no third-party tracking scripts, and no analytics platforms are
-          currently integrated into this site. If that changes, this page will change with it, and
-          the &ldquo;last updated&rdquo; date at the top will move.
-        </p>
-      </LegalSection>
-
-      <LegalSection title="Controlling storage">
-        <p>
-          You can clear your browser&rsquo;s local storage at any time through your browser&rsquo;s
-          settings. Doing so simply resets your theme preference to the default; it won&rsquo;t
-          affect anything else, since there&rsquo;s nothing else stored.
+          No advertising cookies, no third-party tracking scripts and no analytics platforms are
+          integrated into this site. If that changes, this page and its date will change with it.
         </p>
       </LegalSection>
 

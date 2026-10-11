@@ -14,8 +14,9 @@ export function RelevantIndustries({ industries, note }: RelevantIndustriesProps
     <section className="bg-surface-raised py-16 md:py-24 lg:py-30" aria-labelledby="industries-heading">
       <div className="container-oa7">
         <SectionHeader
-          eyebrow="Where this fits"
-          title="Industries that use this"
+          id="industries-heading"
+          eyebrow="Sectors"
+          title="Sectors I have explored"
           description={note}
         />
         <div className="mt-8 md:mt-12">

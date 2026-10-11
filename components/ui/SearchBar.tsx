@@ -8,7 +8,7 @@ interface SearchBarProps {
   placeholder?: string;
 }
 
-export function SearchBar({ value, onChange, placeholder = "Search templates..." }: SearchBarProps) {
+export function SearchBar({ value, onChange, placeholder = "Search concepts..." }: SearchBarProps) {
   return (
     <div className="relative flex-1">
       <Search

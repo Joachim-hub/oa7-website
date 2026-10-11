@@ -5,10 +5,14 @@ export const SITE = {
   legalName: "OA7 Software",
   tagline: "Technology, built to be trusted.",
   description:
-    "OA7 designs and builds premium websites, mobile applications, and enterprise software for startups and established businesses.",
-  url: "https://oa7.dev",
-  email: "oa7software@gmail.com",
-  whatsapp: "+233596210523",
+    "OA7 Software is the independent software initiative of Joachim Osafo Amoateng, a Mathematics graduate in Ghana building websites and mobile apps.",
+  // Set NEXT_PUBLIC_SITE_URL in your hosting environment to the real domain.
+  // The fallback is a placeholder and should be confirmed before launch.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://oa7.dev",
+  email: "osafoamoatengj@gmail.com",
+  linkedin: "https://www.linkedin.com/in/joachim-osafo-0a55842b4/",
+  github: "https://github.com/Joachim-hub",
+  founder: "Joachim Osafo Amoateng",
 };
 
 const SERVICE_NAV_ITEMS = SERVICES_DETAIL.map((s) => ({
@@ -19,25 +23,25 @@ const SERVICE_NAV_ITEMS = SERVICES_DETAIL.map((s) => ({
 
 export const MAIN_NAV = [
   {
-    label: "Services",
+    label: "What I Build",
     href: "/services",
     children: SERVICE_NAV_ITEMS,
   },
-  { label: "Templates", href: "/templates" },
   { label: "Portfolio", href: "/portfolio" },
-  { label: "Industries", href: "/industries" },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Concepts", href: "/templates" },
+  { label: "Sectors", href: "/industries" },
+  { label: "Work With Me", href: "/pricing" },
   { label: "About", href: "/about" },
 ] as const;
 
 export const FOOTER_NAV = {
   services: SERVICE_NAV_ITEMS.map(({ label, href }) => ({ label, href })),
   resources: [
-    { label: "Templates", href: "/templates" },
     { label: "Portfolio", href: "/portfolio" },
-    { label: "Industries", href: "/industries" },
-    { label: "Process", href: "/process" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Template concepts", href: "/templates" },
+    { label: "Sector ideas", href: "/industries" },
+    { label: "How I work", href: "/process" },
+    { label: "Work with me", href: "/pricing" },
   ],
   company: [
     { label: "About", href: "/about" },
@@ -45,14 +49,13 @@ export const FOOTER_NAV = {
   ],
   legal: [
     { label: "Privacy Policy", href: "/legal/privacy" },
-    { label: "Terms of Service", href: "/legal/terms" },
+    { label: "Terms of Use", href: "/legal/terms" },
     { label: "Cookie Policy", href: "/legal/cookies" },
   ],
 };
 
 export const SOCIAL_LINKS = [
-  { label: "Twitter", href: "https://twitter.com/oa7" },
-  { label: "LinkedIn", href: "https://linkedin.com/company/oa7" },
-  { label: "GitHub", href: "https://github.com/oa7" },
-  { label: "Instagram", href: "https://instagram.com/oa7" },
+  { label: "LinkedIn", href: SITE.linkedin },
+  { label: "GitHub", href: SITE.github },
+  { label: "Email", href: `mailto:${SITE.email}` },
 ];

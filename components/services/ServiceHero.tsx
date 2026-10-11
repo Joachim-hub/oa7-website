@@ -4,7 +4,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Globe, Smartphone, Building2, Sparkles, Figma, Wrench, Workflow, ArrowRight, ChevronRight } from "lucide-react";
 import type { ServiceIcon } from "@/data/services-detail";
+import type { ServiceStatus } from "@/data/services-detail";
+import { serviceStatusVariant } from "@/data/services";
 import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
 import { SignalField } from "@/components/shared/SignalField";
 
 const ICONS: Record<ServiceIcon, typeof Globe> = {
@@ -33,9 +36,11 @@ interface ServiceHeroProps {
   icon: ServiceIcon;
   tagline: string;
   description: string;
+  status: ServiceStatus;
+  statusNote: string;
 }
 
-export function ServiceHero({ slug, name, icon, tagline, description }: ServiceHeroProps) {
+export function ServiceHero({ slug, name, icon, tagline, description, status, statusNote }: ServiceHeroProps) {
   const Icon = ICONS[icon];
 
   return (
@@ -46,7 +51,7 @@ export function ServiceHero({ slug, name, icon, tagline, description }: ServiceH
       <div className="container-oa7 relative">
         <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-secondary-500">
           <Link href="/services" className="hover:text-secondary-100">
-            Services
+            What I Build
           </Link>
           <ChevronRight className="h-3.5 w-3.5" aria-hidden="true" />
           <span className="text-secondary-300" aria-current="page">
@@ -73,16 +78,21 @@ export function ServiceHero({ slug, name, icon, tagline, description }: ServiceH
             {description}
           </motion.p>
 
+          <motion.div variants={item} className="mt-6 flex flex-col items-start gap-2">
+            <Badge variant={serviceStatusVariant(status)}>{status}</Badge>
+            <p className="max-w-xl text-sm leading-relaxed text-secondary-500">{statusNote}</p>
+          </motion.div>
+
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
             <Button
               href={`/contact?service=${slug}&intent=inquiry`}
               size="lg"
               iconRight={<ArrowRight className="h-4 w-4" />}
             >
-              Start a project
+              Get in touch
             </Button>
-            <Button href="/pricing" variant="outline" size="lg">
-              See pricing
+            <Button href="/portfolio" variant="outline" size="lg">
+              View projects
             </Button>
           </motion.div>
         </motion.div>

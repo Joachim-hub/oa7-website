@@ -2,33 +2,33 @@ import type { AccordionItemData } from "@/components/ui/Accordion";
 
 export const HOME_FAQ: AccordionItemData[] = [
   {
-    id: "timeline",
-    question: "How long does a typical project take?",
+    id: "what-is-oa7",
+    question: "What is OA7 Software?",
     answer:
-      "A template-based website usually ships in 1–2 weeks. Custom websites and apps typically take 4–10 weeks depending on scope. We give you a firm timeline after discovery, not before.",
+      "OA7 Software is my independent software initiative. I'm Joachim Osafo Amoateng, a Mathematics graduate from the University of Mines and Technology (UMaT) in Ghana, and I build websites and mobile apps to develop my practical skills.",
   },
   {
-    id: "template-vs-custom",
-    question: "What's the difference between a template and a custom build?",
+    id: "client-work",
+    question: "Have you done paid client work?",
     answer:
-      "Templates are pre-built, production-ready designs you can customize with your own branding and content. Custom builds start from a blank page and are designed specifically around your requirements.",
+      "Not yet in any substantial way. Every project in the portfolio is an independent project. FarmLink Ghana and Bright Future Academy were not commissioned by clients, and the apps in testing and development are my own.",
   },
   {
-    id: "post-launch",
-    question: "Do you offer support after launch?",
+    id: "projects-live",
+    question: "Are the projects live?",
     answer:
-      "Yes. Every project includes a support window after launch, and ongoing maintenance plans are available if you want us to keep improving the product over time.",
+      "FarmLink Ghana and Bright Future Academy are completed but not publicly published. Hitzplay and Unit Converter are in closed testing with 12 testers each. Puzzleplay and the Health & Wellness App are still in development. Each project page states its status.",
   },
   {
     id: "tech-stack",
-    question: "What technologies do you build with?",
+    question: "What technologies do you use?",
     answer:
-      "Mainly Next.js, React, and TypeScript for the web, and Flutter for mobile apps. We choose the stack based on what the project actually needs, not what's trendy.",
+      "HTML, CSS and JavaScript for the web, Flutter for mobile apps, and Python, SQL, Microsoft Excel and Power BI for working with data.",
   },
   {
     id: "get-started",
-    question: "How do I get started?",
+    question: "How can I get in touch?",
     answer:
-      "Reach out through the contact page with a short description of what you're building. We'll follow up to schedule a discovery call and scope the project.",
+      "Email me at osafoamoatengj@gmail.com or message me on LinkedIn. The contact page also has a form that opens a pre-filled email.",
   },
 ];

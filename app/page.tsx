@@ -1,34 +1,33 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesPreview } from "@/components/sections/ServicesPreview";
-import { FeaturedTemplates } from "@/components/sections/FeaturedTemplates";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
+import { InProgress } from "@/components/sections/InProgress";
+import { Skills } from "@/components/sections/Skills";
+import { FounderSection } from "@/components/about/FounderSection";
 import { WhyOA7 } from "@/components/sections/WhyOA7";
-import { Industries } from "@/components/sections/Industries";
 import { Process } from "@/components/sections/Process";
-import { Stats } from "@/components/sections/Stats";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
+import { FOUNDER } from "@/data/about";
 
 export const metadata: Metadata = {
-  title: "Premium Websites, Mobile Apps & Enterprise Software",
+  title: "Independent Software Developer, Websites & Mobile Apps",
   description:
-    "OA7 designs and builds premium websites, mobile applications, enterprise software, and AI solutions for startups, SMEs, and enterprise clients.",
+    "OA7 Software is the independent software initiative of Joachim Osafo Amoateng, a Mathematics graduate in Ghana building websites and mobile apps with HTML, CSS, JavaScript and Flutter.",
 };
 
 export default function HomePage() {
   return (
     <>
       <Hero />
-      <ServicesPreview />
-      <FeaturedTemplates />
       <FeaturedProjects />
+      <InProgress />
+      <ServicesPreview />
+      <Skills />
+      <FounderSection name={FOUNDER.name} role={FOUNDER.role} bio={FOUNDER.bio} />
       <WhyOA7 />
-      <Industries />
       <Process />
-      <Stats />
-      <Testimonials />
       <FAQ />
       <FinalCTA />
     </>

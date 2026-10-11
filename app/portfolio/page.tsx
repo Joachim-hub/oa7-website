@@ -6,7 +6,7 @@ import { PortfolioExplorer } from "@/components/portfolio/PortfolioExplorer";
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
-    "Case studies from projects OA7 has built from the ground up, including the challenge, the approach, and what shipped.",
+    "Independent projects by Joachim Osafo Amoateng: two completed portfolio projects, two mobile apps in closed testing, and two apps in development.",
 };
 
 export default function PortfolioPage() {
@@ -16,13 +16,18 @@ export default function PortfolioPage() {
         <SectionHeader
           as="h1"
           eyebrow="Portfolio"
-          title="Work we've built, start to finish."
-          description="Each case study covers the actual problem, the approach we took, and what shipped. Not just a screenshot gallery."
+          title="Independent projects, with their real status."
+          description="Everything here is my own work, built to develop practical skills. None of it was commissioned by a client. Each project shows exactly where it stands: completed, in closed testing, or still in development."
         />
 
         <div className="mt-8 md:mt-12">
           <PortfolioExplorer projects={PROJECTS} />
         </div>
+
+        <p className="mt-12 max-w-2xl text-sm leading-relaxed text-secondary-500">
+          I also build personal website projects, and some of them are deployed on Vercel. They
+          are not listed individually here.
+        </p>
       </div>
     </div>
   );

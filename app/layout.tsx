@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     url: SITE.url,
     siteName: SITE.name,
     type: "website",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: SITE.name }],
+    images: [{ url: "/logo.png", width: 896, height: 370, alt: `${SITE.legalName} logo` }],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
-    images: ["/og-image.png"],
+    images: ["/logo.png"],
   },
   robots: { index: true, follow: true },
-  alternates: { canonical: SITE.url },
+  alternates: { canonical: "./" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

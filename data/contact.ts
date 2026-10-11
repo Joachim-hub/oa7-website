@@ -1,34 +1,32 @@
 export const CONTACT_FAQ = [
   {
-    question: "How quickly do you reply?",
+    question: "How do I reach you?",
     answer:
-      "Within a couple of business days, usually sooner. If it's urgent, say so in the message and mention it again over WhatsApp.",
+      "Email is best: osafoamoatengj@gmail.com. You can also message me on LinkedIn. The form on this page opens your email app with your message ready to send.",
   },
   {
     question: "What should I include in my message?",
     answer:
-      "What you're building, roughly who it's for, and any deadline you're working against. You don't need a full spec. We'll ask the rest during discovery.",
+      "Who you are, what you have in mind, and any timing that matters. A few lines is enough to start.",
   },
   {
-    question: "Do you take on small projects, or only larger ones?",
+    question: "Are you open to employment or collaboration?",
     answer:
-      "Both. A template customization and a multi-portal system go through the same process, just at different scales.",
+      "Yes. I am open to conversations with employers, clients and collaborators. My work so far is independent projects, and I describe it that way.",
   },
   {
-    question: "I'm not sure yet what I need. Can I still reach out?",
+    question: "I'm not sure whether you can help. Can I still write?",
     answer:
-      "Yes. Tell us what problem you're trying to solve and we'll help you figure out whether that's a template, a custom build, or something smaller than either.",
+      "Yes. Tell me what you are trying to do and I will tell you honestly whether it is something I can help with.",
   },
 ];
 
 /**
  * Maps the `intent` query param (set by CTAs across the site, e.g.
- * `/contact?template=slug&intent=purchase`) to a plain-language sentence
- * shown above the form, so the visitor knows we saw where they came from.
+ * `/contact?template=slug&intent=inquiry`) to a plain-language phrase used to
+ * start the message, so the visitor knows we saw where they came from.
  */
 export const INTENT_LABELS: Record<string, string> = {
-  purchase: "buying",
-  customize: "customizing",
-  inquiry: "learning more about",
-  "similar-project": "starting something similar to",
+  inquiry: "asking about",
+  "similar-project": "asking about something similar to",
 };

@@ -1,78 +1,30 @@
 export const PRICING_FACTORS = [
-  "How many distinct user roles or portals the system needs",
+  "What the project needs to do, and how many screens or pages it involves",
+  "Whether it is a website, a mobile app or a data task",
   "Whether it connects to tools or data you already have",
-  "How much content, and how many pages or screens, are involved",
-  "Whether there's a CMS, admin dashboard, or internal tool to build",
-  "How much of it is fully custom versus built on an existing template",
-  "The timeline. A compressed schedule takes more concurrent effort, not just more hours",
-];
-
-export const WHATS_INCLUDED = [
-  {
-    title: "Source code, yours to keep",
-    description: "No licensing fees, no dependency on us staying in business. The code is yours.",
-  },
-  {
-    title: "A tested build before final payment",
-    description: "You see and use the real thing before the last invoice, not a description of it.",
-  },
-  {
-    title: "Documentation",
-    description: "Written or recorded notes for anything your team needs to operate day to day.",
-  },
-  {
-    title: "Agreed revision rounds",
-    description: "Built into the process from the start, not something you have to negotiate for later.",
-  },
-];
-
-export interface PolicyItem {
-  title: string;
-  description: string;
-}
-
-export const PRICING_POLICIES: PolicyItem[] = [
-  {
-    title: "Revisions",
-    description:
-      "Every project includes an agreed number of revision rounds during the review stage. Anything beyond that gets scoped and quoted as its own small addition, so it's never a surprise charge.",
-  },
-  {
-    title: "Support after launch",
-    description:
-      "Every project includes a support window right after launch. Ongoing maintenance plans are available after that if you want us to keep improving things.",
-  },
-  {
-    title: "Payment structure",
-    description:
-      "Templates are paid in full at purchase, since there's no scoping involved. Custom projects are split across milestones, typically a deposit to start and further payments tied to agreed checkpoints.",
-  },
+  "How much content and design work is involved",
+  "How soon you need it",
 ];
 
 export const PRICING_FAQ = [
   {
-    question: "Why don't custom projects have listed prices?",
+    question: "Do you have a price list?",
     answer:
-      "Because listing a number before we've scoped the work would be a guess, not a quote. Two projects that sound similar on paper can take very different amounts of work depending on integrations, content, and how many people need to use the system.",
+      "No. OA7 is early-stage and I have not set standard prices. Nothing on this site can be bought off the shelf.",
   },
   {
-    question: "How do I actually get a quote?",
+    question: "Can I buy one of the template concepts?",
     answer:
-      "Reach out through Contact with what you're building. We'll ask a few scoping questions and follow up with a fixed price for the project as discussed, not a range.",
+      "No. The concepts on the Concepts page are design ideas. They are not for sale and have no live demos.",
   },
   {
-    question: "Can I start with a template and add custom features later?",
+    question: "How would pricing work for a project?",
     answer:
-      "Yes, and it's a common path. Start from a template to launch faster, then scope custom additions once you know what you actually need from real usage.",
+      "We would talk about what you need first. If it is something I can help with, we would agree the scope and the terms before any work starts.",
   },
   {
-    question: "Do you require full payment upfront?",
+    question: "Are you available for paid work?",
     answer:
-      "No. Templates are paid in full at purchase since there's no ongoing scoping involved. Custom projects are split across milestones instead.",
-  },
-  {
-    question: "What happens if a project runs over the agreed scope?",
-    answer:
-      "We'll tell you before doing the extra work, not after. Anything outside the agreed scope gets quoted separately, so there's nothing unexpected on the final invoice.",
+      "I am open to conversations with employers, clients and collaborators. Send me a message with what you have in mind.",
   },
 ];

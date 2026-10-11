@@ -13,10 +13,10 @@ export function ContactHero() {
           className="max-w-xl"
         >
           <h1 className="text-4xl font-semibold tracking-tight text-secondary-0 md:text-5xl">
-            Tell us what you&rsquo;re building.
+            Get in touch.
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-secondary-400">
-            A few lines is enough to start. We&rsquo;ll follow up with questions, not a sales pitch.
+            Hiring, a small project or a collaboration: a few lines is enough to start. I reply by email.
           </p>
         </motion.div>
       </div>

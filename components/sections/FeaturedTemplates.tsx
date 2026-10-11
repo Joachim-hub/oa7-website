@@ -8,20 +8,21 @@ import { Button } from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export function FeaturedTemplates() {
-  const featured = TEMPLATES.filter((t) => t.featured);
+  const featured = TEMPLATES.slice(0, 3);
 
   return (
     <section className="py-16 md:py-24 lg:py-30" aria-labelledby="featured-templates-heading">
       <div className="container-oa7">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeader
-            eyebrow="Ready to launch"
-            title="Featured templates"
-            description="Production-grade templates you can customize and launch in days, not months."
+            id="featured-templates-heading"
+            eyebrow="Concepts"
+            title="Template concepts"
+            description="Ideas for website designs. They are not for sale and have no live demos."
             className="max-w-xl"
           />
           <Button href="/templates" variant="outline" iconRight={<ArrowRight className="h-4 w-4" />}>
-            Browse all templates
+            Browse all concepts
           </Button>
         </div>
 

@@ -65,7 +65,7 @@ export default function IndustryDetailsPage({ params }: PageProps) {
       {/* Overview */}
       <section className="py-4 md:py-6" aria-labelledby="overview-heading">
         <div className="container-oa7">
-          <SectionHeader eyebrow="Overview" title="How we approach this" className="max-w-3xl" />
+          <SectionHeader id="overview-heading" eyebrow="Overview" title="About this sector" className="max-w-3xl" />
           <p className="mt-6 max-w-3xl text-base leading-relaxed text-secondary-400">
             {industry.overview}
           </p>
@@ -75,23 +75,25 @@ export default function IndustryDetailsPage({ params }: PageProps) {
       <ProblemsSolved
         problems={industry.challenges}
         eyebrow="Challenges"
-        title="What this industry usually runs into"
-        description="The recurring problems we're typically brought in to solve."
+        title="Common problems in this sector"
+        description="Problems a good website for this sector could help with. These are general observations, not client case studies."
       />
 
       <ServiceFeatureGrid
-        features={industry.whatWeBuild}
-        eyebrow="What we build"
-        title="Typical deliverables"
+        features={industry.ideas}
+        eyebrow="Ideas"
+        title="What a website here could include"
       />
 
-      <FAQSection
-        items={industry.faqs.map((faq, i) => ({
-          id: `faq-${i}`,
-          question: faq.question,
-          answer: faq.answer,
-        }))}
-      />
+      {industry.faqs.length > 0 && (
+        <FAQSection
+          items={industry.faqs.map((faq, i) => ({
+            id: `faq-${i}`,
+            question: faq.question,
+            answer: faq.answer,
+          }))}
+        />
+      )}
 
       <div className="container-oa7">
         <RelatedServices services={relatedServices} />

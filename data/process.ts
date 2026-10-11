@@ -6,25 +6,25 @@ export interface CommunicationChannel {
 export const COMMUNICATION_CHANNELS: CommunicationChannel[] = [
   {
     channel: "Email",
-    purpose: "Day-to-day updates, files, and anything that needs a written record.",
+    purpose: "The best way to reach me. Questions, files and anything that needs a written record.",
   },
   {
-    channel: "WhatsApp",
-    purpose: "Quick questions and fast turnarounds during active build phases.",
+    channel: "LinkedIn",
+    purpose: "A good place for introductions and professional conversations.",
   },
   {
-    channel: "Scheduled calls",
-    purpose: "Kickoff, design review, and pre-launch. The points where a conversation beats a message thread.",
+    channel: "GitHub",
+    purpose: "Where you can look at my public repositories and activity.",
   },
 ];
 
 export const QUALITY_PRINCIPLES = [
-  "Nothing reaches you for review until it's been checked against real devices, not just a browser preview",
-  "Accessibility is checked against WCAG AA criteria, not just eyeballed for contrast",
-  "Performance is measured against a budget agreed during planning, not tuned after the fact",
-  "Every revision request gets scoped and confirmed before work starts on it",
-  "Deployment includes a rollback plan, not just a forward path",
-  "QA happens before your review window, not during it",
+  "Pages and screens that work on both phones and desktops",
+  "Text that is readable, with sensible contrast and clear structure",
+  "Links, buttons and forms that do what they say",
+  "Honest labels for what is finished, in testing or still an idea",
+  "Testing a build myself before I show it to anyone",
+  "Saying so when something is outside what I have done before",
 ];
 
 export interface ProcessStep {
@@ -41,113 +41,71 @@ export interface ProcessStageDetail extends ProcessStep {
 export const PROCESS_STEPS: ProcessStep[] = [
   {
     number: "01",
-    title: "Discovery",
-    description: "We map your goals, users, and constraints before a single screen gets designed.",
+    title: "Understand",
+    description: "Work out what the software needs to do and who it is for before building anything.",
   },
   {
     number: "02",
-    title: "Design",
-    description: "Wireframes, then high-fidelity design, reviewed with you at each stage. Not just at the end.",
+    title: "Plan and design",
+    description: "Sketch the screens and decide what to build first.",
   },
   {
     number: "03",
-    title: "Development",
-    description: "Production code from day one, built in the open with regular working checkpoints.",
+    title: "Build",
+    description: "Write the code in small steps, so there is always something working to look at.",
   },
   {
     number: "04",
-    title: "Testing & QA",
-    description: "Cross-device testing, accessibility checks, and performance audits before anything ships.",
+    title: "Test",
+    description: "Try it on real devices and fix what breaks. For apps, testers help find problems.",
   },
   {
     number: "05",
-    title: "Launch & Support",
-    description: "We handle deployment and stay on afterward for fixes, refinements, and new features.",
+    title: "Release and improve",
+    description: "Put it in front of people, learn from what happens and keep improving it.",
   },
 ];
 
-// The full ten-stage lifecycle behind the five-step summary above —
-// used by the standalone Process page.
+// A fuller description of the five steps above, used on the Process page.
 export const PROJECT_LIFECYCLE: ProcessStageDetail[] = [
   {
     number: "01",
-    title: "Discovery",
+    title: "Understand",
     description:
-      "Understanding your goals, your users, and what actually counts as success before any design work starts.",
-    deliverables: ["Discovery brief covering goals, scope, and constraints", "Initial project scope outline"],
-    clientInvolvement: "A structured discovery conversation and a short intake questionnaire.",
+      "Working out what the software needs to do, who will use it, and what a good result looks like.",
+    deliverables: ["A short written summary of the goal", "A list of what is in and out of scope"],
+    clientInvolvement: "A conversation, usually by email, about what you need.",
   },
   {
     number: "02",
-    title: "Planning",
-    description:
-      "Turning discovery into a concrete plan: scope boundaries, the page or feature list, and how the work gets sequenced.",
-    deliverables: ["Project plan and scope document", "Sitemap or feature list"],
-    clientInvolvement: "Reviewing and signing off on scope before design begins.",
+    title: "Plan and design",
+    description: "Turning the goal into a list of screens or pages and deciding what to build first.",
+    deliverables: ["A simple page or screen list", "Rough layouts of the main screens"],
+    clientInvolvement: "Looking over the plan and saying what matters most.",
   },
   {
     number: "03",
-    title: "Research",
+    title: "Build",
     description:
-      "Looking at how comparable problems get solved, what your audience actually needs, and where the real technical or content constraints are.",
-    deliverables: ["Research notes informing design decisions", "Technical feasibility notes, where relevant"],
-    clientInvolvement: "Sharing existing brand assets, content, and any prior research you have.",
+      "Writing the code in small steps, so that there is always a working version to check.",
+    deliverables: ["Working versions at agreed points", "Code kept in version control"],
+    clientInvolvement: "Optional check-ins on the working version.",
   },
   {
     number: "04",
-    title: "UI/UX Design",
+    title: "Test",
     description:
-      "Wireframes progressing to high-fidelity design, built as a reusable system rather than one-off screens.",
-    deliverables: ["Wireframes", "High-fidelity designs", "A reviewable, interactive prototype"],
-    clientInvolvement: "Structured review at each stage. Wireframes first, then visual design. Not a single reveal at the end.",
+      "Trying the software on phones and desktops, fixing what breaks, and for apps, using testers to find problems I miss.",
+    deliverables: ["A tested build", "A list of known issues"],
+    clientInvolvement: "Trying the build and sharing feedback.",
   },
   {
     number: "05",
-    title: "Development",
+    title: "Release and improve",
     description:
-      "Production code built in testable increments, with working builds along the way rather than one long silent build phase.",
-    deliverables: ["Working builds at agreed checkpoints", "Source code in a version-controlled repository"],
-    clientInvolvement: "Optional check-ins on working builds; available to supply real content or data as needed.",
-  },
-  {
-    number: "06",
-    title: "Testing & Quality Assurance",
-    description:
-      "Cross-device testing, accessibility checks, and performance review, done before anything reaches you for final review. Not after.",
-    deliverables: ["QA checklist results", "List of known issues and how they were resolved"],
-    clientInvolvement: "None required. This stage is our responsibility before anything reaches you.",
-  },
-  {
-    number: "07",
-    title: "Client Review & Revisions",
-    description:
-      "A structured window where you test the real, working product, not a description of it, with a defined process for requesting changes.",
-    deliverables: ["Scoped, prioritized revision list", "Updated build reflecting agreed changes"],
-    clientInvolvement: "Hands-on testing and structured feedback within an agreed review window.",
-  },
-  {
-    number: "08",
-    title: "Deployment",
-    description:
-      "Moving the project from staging to production, covering domain, hosting, monitoring, and a rollback plan if anything needs to be reversed.",
-    deliverables: ["Live, deployed project", "Deployment documentation"],
-    clientInvolvement: "Providing access to domain and hosting accounts, or approving OA7-managed hosting.",
-  },
-  {
-    number: "09",
-    title: "Training",
-    description:
-      "For projects with a CMS, admin portal, or internal tool, walking your team through how to actually use it day to day. Skipped where there's nothing for a client to operate.",
-    deliverables: ["Walkthrough session", "Written or recorded reference material"],
-    clientInvolvement: "Attending the walkthrough with whoever will use the system day to day.",
-  },
-  {
-    number: "10",
-    title: "Maintenance & Continuous Improvement",
-    description:
-      "What happens after launch: fixes, dependency updates, and room to keep improving the product as your needs change.",
-    deliverables: ["Support plan scope, if continuing under a maintenance plan", "Monitoring setup, where included"],
-    clientInvolvement: "Flagging issues as they come up, plus periodic check-ins on plan scope.",
+      "Putting the software where people can use it, then learning from how it goes and improving it.",
+    deliverables: ["A released or deployed version", "Notes on what to improve next"],
+    clientInvolvement: "Reporting problems as they come up.",
   },
 ];
 
@@ -158,19 +116,18 @@ export interface ProcessFAQ {
 
 export const PROCESS_FAQ: ProcessFAQ[] = [
   {
-    question: "Do you provide a fixed price or an estimate?",
-    answer: "A fixed price, agreed after discovery and planning. Once scope is defined, the price is set. It doesn't drift like an open-ended estimate can.",
+    question: "Is this a formal process used on client projects?",
+    answer:
+      "No. It is the approach I follow on my own projects, written down. I have not run it on a client engagement.",
   },
   {
-    question: "What happens if requirements change mid-project?",
-    answer: "Changes get scoped like anything else. We'll tell you honestly whether it fits inside the current plan or needs to be treated as a separate addition, before any work starts on it.",
+    question: "What happens if the scope of a project changes?",
+    answer:
+      "I would talk it through with you and be honest about whether it fits within what we agreed, before doing the extra work.",
   },
   {
-    question: "What if I need more revisions than expected?",
-    answer: "The review stage includes an agreed number of revision rounds. Additional rounds beyond that are scoped and quoted separately, so there's never a surprise charge.",
-  },
-  {
-    question: "Is training included?",
-    answer: "For anything with a CMS, admin portal, or internal tool for your team to operate, yes. For a simple marketing site with nothing to operate, that stage is skipped.",
+    question: "Do you provide support after a project is released?",
+    answer:
+      "There is no formal support plan. For projects I work on with someone, any follow-up work would be agreed as part of that project.",
   },
 ];

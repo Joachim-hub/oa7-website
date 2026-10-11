@@ -1,52 +1,41 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { Project } from "@/data/projects";
+import type { Project, ProjectStatus } from "@/data/projects";
 import { PROJECT_CATEGORIES } from "@/data/projects";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { CategoryPills } from "@/components/ui/CategoryPills";
 import { SortDropdown } from "@/components/ui/SortDropdown";
 import { ProjectGrid } from "@/components/ui/ProjectGrid";
 import { EmptyState } from "@/components/ui/EmptyState";
-import { LoadingSkeleton } from "@/components/ui/LoadingSkeleton";
 import { Pagination } from "@/components/ui/Pagination";
 
-const PAGE_SIZE = 4;
+const PAGE_SIZE = 6;
 
-type SortOption = "featured" | "newest" | "popular";
+type SortOption = "status" | "name";
 
 const SORT_OPTIONS: { value: SortOption; label: string }[] = [
-  { value: "featured", label: "Featured" },
-  { value: "newest", label: "Newest" },
-  { value: "popular", label: "Most popular" },
+  { value: "status", label: "Completed first" },
+  { value: "name", label: "Name (A–Z)" },
 ];
+
+const STATUS_ORDER: Record<ProjectStatus, number> = {
+  Completed: 0,
+  "Closed testing": 1,
+  "In development": 2,
+};
 
 function sortProjects(projects: Project[], sort: SortOption): Project[] {
   const list = [...projects];
-  switch (sort) {
-    case "newest":
-      return list.sort((a, b) => +new Date(b.date) - +new Date(a.date));
-    case "popular":
-      return list.sort((a, b) => b.popularity - a.popularity);
-    case "featured":
-    default:
-      return list.sort((a, b) => Number(b.featured) - Number(a.featured) || b.popularity - a.popularity);
-  }
+  if (sort === "name") return list.sort((a, b) => a.name.localeCompare(b.name));
+  return list.sort((a, b) => STATUS_ORDER[a.status] - STATUS_ORDER[b.status]);
 }
 
 export function PortfolioExplorer({ projects }: { projects: Project[] }) {
   const [search, setSearch] = useState("");
   const [category, setCategory] = useState<string>("All");
-  const [sort, setSort] = useState<SortOption>("featured");
+  const [sort, setSort] = useState<SortOption>("status");
   const [page, setPage] = useState(1);
-
-  // Simulated initial fetch — mirrors the Templates explorer's loading
-  // pattern so both pages behave identically once real data arrives.
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 500);
-    return () => clearTimeout(timer);
-  }, []);
 
   useEffect(() => {
     setPage(1);
@@ -60,7 +49,8 @@ export function PortfolioExplorer({ projects }: { projects: Project[] }) {
         !query ||
         p.name.toLowerCase().includes(query) ||
         p.summary.toLowerCase().includes(query) ||
-        p.industry.toLowerCase().includes(query) ||
+        (p.domain ?? "").toLowerCase().includes(query) ||
+        p.status.toLowerCase().includes(query) ||
         p.stack.some((tech) => tech.toLowerCase().includes(query));
       return matchesCategory && matchesSearch;
     });
@@ -74,7 +64,7 @@ export function PortfolioExplorer({ projects }: { projects: Project[] }) {
   function resetFilters() {
     setSearch("");
     setCategory("All");
-    setSort("featured");
+    setSort("status");
   }
 
   return (
@@ -89,26 +79,20 @@ export function PortfolioExplorer({ projects }: { projects: Project[] }) {
       </div>
 
       <p className="mt-6 text-sm text-secondary-500" aria-live="polite">
-        {isLoading
-          ? "Loading projects…"
-          : `Showing ${paginated.length} of ${sorted.length} project${sorted.length === 1 ? "" : "s"}`}
+        {`Showing ${paginated.length} of ${sorted.length} project${sorted.length === 1 ? "" : "s"}`}
       </p>
 
       <div className="mt-6">
-        {isLoading ? (
-          <LoadingSkeleton count={4} columns="cols-2" label="projects" />
-        ) : sorted.length === 0 ? (
+        {sorted.length === 0 ? (
           <div className="grid grid-cols-1">
-            <EmptyState onReset={resetFilters} />
+            <EmptyState onReset={resetFilters} title="No projects match those filters" />
           </div>
         ) : (
           <ProjectGrid projects={paginated} />
         )}
       </div>
 
-      {!isLoading && (
-        <Pagination currentPage={page} totalPages={totalPages} onChange={setPage} />
-      )}
+      <Pagination currentPage={page} totalPages={totalPages} onChange={setPage} />
     </div>
   );
 }

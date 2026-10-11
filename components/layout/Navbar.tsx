@@ -90,11 +90,8 @@ export function Navbar() {
         </ul>
 
         <div className="hidden items-center gap-3 lg:flex">
-          <Button href="/contact" variant="ghost" size="sm">
-            Contact
-          </Button>
-          <Button href="/pricing" variant="primary" size="sm">
-            Get a quote
+          <Button href="/contact" variant="primary" size="sm">
+            Get in touch
           </Button>
         </div>
 
@@ -141,11 +138,8 @@ export function Navbar() {
             </li>
           ))}
           <li className="mt-5 flex flex-col gap-3">
-            <Button href="/contact" variant="outline" fullWidth onClick={() => setMobileOpen(false)}>
-              Contact
-            </Button>
-            <Button href="/pricing" variant="primary" fullWidth onClick={() => setMobileOpen(false)}>
-              Get a quote
+            <Button href="/contact" variant="primary" fullWidth onClick={() => setMobileOpen(false)}>
+              Get in touch
             </Button>
           </li>
         </ul>

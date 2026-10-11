@@ -32,7 +32,7 @@ export function Hero() {
           className="mx-auto max-w-3xl text-center"
         >
           <motion.div variants={item} className="flex justify-center">
-            <Badge variant="accent">Now onboarding new clients</Badge>
+            <Badge variant="accent">Independent software initiative · Ghana</Badge>
           </motion.div>
 
           <motion.h1
@@ -48,17 +48,17 @@ export function Hero() {
             variants={item}
             className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-secondary-400"
           >
-            OA7 designs and builds premium websites, mobile applications, and
-            enterprise software for businesses that expect their technology
-            to simply work.
+            OA7 Software is the independent software initiative of Joachim Osafo
+            Amoateng, a Mathematics graduate building websites and mobile apps.
+            Explore the projects I have built and what I am working on now.
           </motion.p>
 
           <motion.div variants={item} className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Button href="/contact" size="lg" iconRight={<ArrowRight className="h-4 w-4" />}>
-              Start a project
+            <Button href="/portfolio" size="lg" iconRight={<ArrowRight className="h-4 w-4" />}>
+              View projects
             </Button>
-            <Button href="/portfolio" variant="outline" size="lg">
-              View our work
+            <Button href="/contact" variant="outline" size="lg">
+              Get in touch
             </Button>
           </motion.div>
         </motion.div>
